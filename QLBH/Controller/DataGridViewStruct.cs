@@ -261,88 +261,83 @@ namespace QLBH.Controller
             nhaSanXuat.Name = "nhaSanXuat";
             nhaSanXuat.ReadOnly = true;
             nhaSanXuat.Visible = true;
-           
-            matKhau.DataPropertyName = "ngayDat";
-            matKhau.HeaderText = "Ngày Đặt";
+          
+            
+            ///dbo.taiKhoanTK
+            matKhau.DataPropertyName = "matKhau";
+            matKhau.HeaderText = "Mật khẩu";
             matKhau.MinimumWidth = 6;
-            matKhau.Name = "ngayDat";
+            matKhau.Name = "matKhau";
             matKhau.ReadOnly = true;
             matKhau.Visible = false;
 
-            maNhom.DataPropertyName = "ngayDat";
-            maNhom.HeaderText = "Ngày Đặt";
+            maNhom.DataPropertyName = "maNhom";
+            maNhom.HeaderText = "Mã Nhóm";
             maNhom.MinimumWidth = 6;
-            maNhom.Name = "ngayDat";
+            maNhom.Name = "maNhom";
             maNhom.ReadOnly = true;
             maNhom.Visible = false;
 
-            hoDem.DataPropertyName = "ngayDat";
-            hoDem.HeaderText = "Ngày Đặt";
+            hoDem.DataPropertyName = "hoDem";
+            hoDem.HeaderText = "Họ Đệm";
             hoDem.MinimumWidth = 6;
-            hoDem.Name = "ngayDat";
+            hoDem.Name = "hoDem";
             hoDem.ReadOnly = true;
             hoDem.Visible = false;
 
-            tenTV.DataPropertyName = "ngayDat";
-            tenTV.HeaderText = "Ngày Đặt";
+            tenTV.DataPropertyName = "tenTV";
+            tenTV.HeaderText = "Tên TV";
             tenTV.MinimumWidth = 6;
-            tenTV.Name = "ngayDat";
+            tenTV.Name = "tenTV";
             tenTV.ReadOnly = true;
             tenTV.Visible = false;
 
-            ngaysinh.DataPropertyName = "ngayDat";
-            ngaysinh.HeaderText = "Ngày Đặt";
+            ngaysinh.DataPropertyName = "ngaySinh";
+            ngaysinh.HeaderText = "Ngày Sinh";
             ngaysinh.MinimumWidth = 6;
-            ngaysinh.Name = "ngayDat";
+            ngaysinh.Name = "ngaySinh";
             ngaysinh.ReadOnly = true;
             ngaysinh.Visible = false;
 
-            ngaysinh.DataPropertyName = "ngayDat";
-            ngaysinh.HeaderText = "Ngày Đặt";
-            ngaysinh.MinimumWidth = 6;
-            ngaysinh.Name = "ngayDat";
-            ngaysinh.ReadOnly = true;
-            ngaysinh.Visible = false;
-
-            gioiTinh.DataPropertyName = "ngayDat";
-            gioiTinh.HeaderText = "Ngày Đặt";
+            gioiTinh.DataPropertyName = "gioiTinh";
+            gioiTinh.HeaderText = "Giới Tính";
             gioiTinh.MinimumWidth = 6;
-            gioiTinh.Name = "ngayDat";
+            gioiTinh.Name = "gioiTinh";
             gioiTinh.ReadOnly = true;
             gioiTinh.Visible = false;
 
-            soDT.DataPropertyName = "ngayDat";
-            soDT.HeaderText = "Ngày Đặt";
+            soDT.DataPropertyName = "soDT";
+            soDT.HeaderText = "Số DT";
             soDT.MinimumWidth = 6;
-            soDT.Name = "ngayDat";
+            soDT.Name = "soDT";
             soDT.ReadOnly = true;
             soDT.Visible = false;
 
-            email.DataPropertyName = "ngayDat";
-            email.HeaderText = "Ngày Đặt";
+            email.DataPropertyName = "email";
+            email.HeaderText = "Email";
             email.MinimumWidth = 6;
-            email.Name = "ngayDat";
+            email.Name = "email";
             email.ReadOnly = true;
             email.Visible = false;
 
-            diaChi.DataPropertyName = "ngayDat";
-            diaChi.HeaderText = "Ngày Đặt";
+            diaChi.DataPropertyName = "diaChi";
+            diaChi.HeaderText = "Địa Chỉ";
             diaChi.MinimumWidth = 6;
-            diaChi.Name = "ngayDat";
+            diaChi.Name = "diaChi";
             diaChi.ReadOnly = true;
             diaChi.Visible = false;
 
-            maQH.DataPropertyName = "ngayDat";
-            maQH.HeaderText = "Ngày Đặt";
+            maQH.DataPropertyName = "maQH";
+            maQH.HeaderText = "Mã Quận Huyện`";
             maQH.MinimumWidth = 6;
-            maQH.Name = "ngayDat";
+            maQH.Name = "maQH";
             maQH.ReadOnly = true;
             maQH.Visible = false;
 
-            trangThai.DataPropertyName = "ngayDat";
-            trangThai.HeaderText = "Ngày Đặt";
+            trangThai.DataPropertyName = "trangThai";
+            trangThai.HeaderText = "Trạng Thái";
             trangThai.MinimumWidth = 6;
-            trangThai.Name = "ngayDat";
+            trangThai.Name = "trangThai";
             trangThai.ReadOnly = true;
             trangThai.Visible = false;
             trangThai.TrueValue = "1";
