@@ -3,25 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLBH.Modal;
+using System.Data.Sql;
 using System.Data.SqlClient;
 
-using QLBH.Modal;
 namespace QLBH.Controller
 {
-    class DAOSanPham
+    class DAOTaiKhoanTV
     {
-
-            
-        public MyMessage InsertData(SanPham sanPham)
+        public MyMessage InsertData(TaiKhoanTV taiKhoan)
         {
 
             SqlConnection con = new DAO().getConnection();
             con.Open();
             SqlCommand command = con.CreateCommand();
-            command.CommandText = "INSERT INTO dbo.sanPham (maSP, tenSP, hinhDD, ndTomTat, nhaSanXuat, ngayDang, " +
-                "maLoai, noiDung, taiKhoan, giaBan, giamGia, daDuyet ) values('" + sanPham.MaSP + "', N'" + sanPham.TenSP + "', '" + sanPham.HinhDD + "', N'" + sanPham.NdTomTat + "', '" + sanPham.NhaSanXuat + "', " + sanPham.NgayDang + "" +
-                ", " +
-                "" + sanPham.MaLoai + ", N'" + sanPham.NoiDung + "', '" + sanPham.TaiKhoan + "', " + sanPham.GiaBan + ", " + sanPham.GiamGia + ", " + (sanPham.DaDuyet ? 1 : 0) + ")";
+            command.CommandText = "INSERT INTO dbo.taiKhoanTV ( taiKhoan, matKhau,  hoDem,  tenTV, soDT, email, diaChi, ghiChu, maNhom, maQH, ngaySinh, gioiTinh, trangThai ) " +
+                "values('"+taiKhoan.TaiKhoan+"', '"+taiKhoan.MatKhau+"', N'"+taiKhoan.HoDem+"', N'"+taiKhoan.TenTV+"', '"+taiKhoan.SoDT+"', '"+taiKhoan.Email+"', N'"+taiKhoan.DiaChi+"', N'"+taiKhoan.GhiChu+"', "+taiKhoan.MaNhom+", "+taiKhoan.MaQH+", "+taiKhoan.NgaySinh.ToString("yyyy-MM-dd")+", "+(taiKhoan.GioiTinh ? 1 : 0 )+", "+(taiKhoan.TrangThai ? 1 : 0)+")";
+
 
             /* command.Parameters.AddWithValue("@maSP", sanPham.MaSP);
              command.Parameters.AddWithValue("@tenSP", sanPham.TenSP);
@@ -63,7 +61,7 @@ namespace QLBH.Controller
             {
                 con.Open();
                 SqlCommand command = con.CreateCommand();
-                command.CommandText = "UPDATE dbo.sanPham set tenSP = N'" + sanPham.TenSP + "', hinhDD = '" + sanPham.HinhDD + "',ndTomTat = N'" + sanPham.NdTomTat + "', nhaSanXuat = '" + sanPham.NhaSanXuat + "', ngayDang = " + sanPham.NgayDang.ToString("yyyy-MM-dd") + "" +
+                command.CommandText = "UPDATE dbo.taiKhoanTV set tenSP = N'" + sanPham.TenSP + "', hinhDD = '" + sanPham.HinhDD + "',ndTomTat = N'" + sanPham.NdTomTat + "', nhaSanXuat = '" + sanPham.NhaSanXuat + "', ngayDang = " + sanPham.NgayDang.To("yyyy-MM-dd") + "" +
                 ", " +
                 "maLoai = " + sanPham.MaLoai + ", noiDung = N'" + sanPham.NoiDung + "', taiKhoan ='" + sanPham.TaiKhoan + "', giaBan =  " + sanPham.GiaBan + ", giamGia = " + sanPham.GiamGia + ", daDuyet =  " + (sanPham.DaDuyet ? 1 : 0) + "WHERE maSP ="+sanPham.MaSP+" ";
                 int result = command.ExecuteNonQuery();
@@ -81,7 +79,7 @@ namespace QLBH.Controller
 
         }
 
-        public MyMessage delectData(String maSP)
+        public MyMessage delectData(TaiKhoanTV taiKhoan)
         {
             SqlConnection con = new DAO().getConnection();
             try
@@ -103,7 +101,5 @@ namespace QLBH.Controller
             }
 
         }
-
-
     }
 }

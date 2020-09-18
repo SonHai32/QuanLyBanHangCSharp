@@ -37,6 +37,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Desktop\[FTUApps.com] - Guna UI Framework Ultimate v2.0.0.1 + Keygen\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Checked.cs" />
+    <Compile Include="Controller\DAOTaiKhoanTV.cs" />
     <Compile Include="Controller\DataGridViewStruct.cs" />
     <Compile Include="Controller\DAO.cs" />
     <Compile Include="Controller\DAOSanPham.cs" />
@@ -88,6 +92,12 @@
     <Compile Include="User_Controls\User_Control_SanPham.Designer.cs">
       <DependentUpon>User_Control_SanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTaiKhoan.Designer.cs">
+      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MyMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="User_Controls\User_Control_SanPham.resx">
       <DependentUpon>User_Control_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTaiKhoan.resx">
+      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MyMessageBox.resx">
       <DependentUpon>MyMessageBox.cs</DependentUpon>
@@ -320,6 +333,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sad %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid_2_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_settings_male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_settings_male_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flip_chart_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_96px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

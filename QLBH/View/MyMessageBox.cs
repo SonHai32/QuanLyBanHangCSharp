@@ -17,6 +17,7 @@ namespace QLBH.View
         MyMessage mess;
         public MyMessageBox(MyMessage mess)
         {
+            
             this.mess = mess;
             InitializeComponent();
             this.lblMessage.Text = mess.MessageText;

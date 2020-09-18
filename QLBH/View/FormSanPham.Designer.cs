@@ -132,7 +132,7 @@
             this.txtGiaBan.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
             this.txtGiaBan.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtGiaBan.LineThickness = 3;
-            this.txtGiaBan.Location = new System.Drawing.Point(13, 249);
+            this.txtGiaBan.Location = new System.Drawing.Point(617, 168);
             this.txtGiaBan.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(250, 38);
@@ -144,7 +144,7 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(12, 220);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(616, 139);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(83, 25);
             this.bunifuCustomLabel4.TabIndex = 7;
@@ -163,7 +163,7 @@
             this.txtGiamGia.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
             this.txtGiamGia.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtGiamGia.LineThickness = 3;
-            this.txtGiamGia.Location = new System.Drawing.Point(338, 249);
+            this.txtGiamGia.Location = new System.Drawing.Point(902, 168);
             this.txtGiamGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiamGia.Name = "txtGiamGia";
             this.txtGiamGia.Size = new System.Drawing.Size(250, 38);
@@ -175,7 +175,7 @@
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(333, 220);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(897, 139);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(95, 25);
             this.bunifuCustomLabel5.TabIndex = 9;
@@ -194,24 +194,26 @@
             this.txtNDTomTat.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
             this.txtNDTomTat.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtNDTomTat.LineThickness = 3;
-            this.txtNDTomTat.Location = new System.Drawing.Point(13, 424);
+            this.txtNDTomTat.Location = new System.Drawing.Point(610, 255);
             this.txtNDTomTat.Margin = new System.Windows.Forms.Padding(4);
             this.txtNDTomTat.Name = "txtNDTomTat";
-            this.txtNDTomTat.Size = new System.Drawing.Size(574, 38);
+            this.txtNDTomTat.Size = new System.Drawing.Size(542, 38);
             this.txtNDTomTat.TabIndex = 12;
             this.txtNDTomTat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNDTomTat.OnValueChanged += new System.EventHandler(this.txtNDTomTat_OnValueChanged);
             // 
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(12, 395);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(612, 226);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(180, 25);
             this.bunifuCustomLabel6.TabIndex = 11;
             this.bunifuCustomLabel6.Text = "Nội Dung Tóm Tắt";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuCustomLabel6.Click += new System.EventHandler(this.bunifuCustomLabel6_Click);
             // 
             // txtNoiDung
             // 
@@ -225,10 +227,10 @@
             this.txtNoiDung.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
             this.txtNoiDung.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtNoiDung.LineThickness = 3;
-            this.txtNoiDung.Location = new System.Drawing.Point(13, 337);
+            this.txtNoiDung.Location = new System.Drawing.Point(10, 255);
             this.txtNoiDung.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoiDung.Name = "txtNoiDung";
-            this.txtNoiDung.Size = new System.Drawing.Size(574, 38);
+            this.txtNoiDung.Size = new System.Drawing.Size(525, 38);
             this.txtNoiDung.TabIndex = 14;
             this.txtNoiDung.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -237,7 +239,7 @@
             this.bunifuCustomLabel7.AutoSize = true;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(12, 308);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(9, 226);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(99, 25);
             this.bunifuCustomLabel7.TabIndex = 13;
@@ -249,7 +251,7 @@
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(12, 565);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(5, 408);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(154, 25);
             this.bunifuCustomLabel8.TabIndex = 15;
@@ -269,12 +271,13 @@
             this.txtHinhDD.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
             this.txtHinhDD.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtHinhDD.LineThickness = 3;
-            this.txtHinhDD.Location = new System.Drawing.Point(172, 664);
+            this.txtHinhDD.Location = new System.Drawing.Point(165, 512);
             this.txtHinhDD.Margin = new System.Windows.Forms.Padding(4);
             this.txtHinhDD.Name = "txtHinhDD";
             this.txtHinhDD.Size = new System.Drawing.Size(289, 38);
             this.txtHinhDD.TabIndex = 18;
             this.txtHinhDD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtHinhDD.OnValueChanged += new System.EventHandler(this.txtHinhDD_OnValueChanged);
             // 
             // txtTenSP
             // 
@@ -291,7 +294,7 @@
             this.txtTenSP.Location = new System.Drawing.Point(13, 168);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(575, 38);
+            this.txtTenSP.Size = new System.Drawing.Size(522, 38);
             this.txtTenSP.TabIndex = 19;
             this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -307,19 +310,20 @@
             this.txtNhaSX.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
             this.txtNhaSX.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtNhaSX.LineThickness = 3;
-            this.txtNhaSX.Location = new System.Drawing.Point(13, 512);
+            this.txtNhaSX.Location = new System.Drawing.Point(10, 347);
             this.txtNhaSX.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhaSX.Name = "txtNhaSX";
-            this.txtNhaSX.Size = new System.Drawing.Size(574, 38);
+            this.txtNhaSX.Size = new System.Drawing.Size(525, 38);
             this.txtNhaSX.TabIndex = 23;
             this.txtNhaSX.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNhaSX.OnValueChanged += new System.EventHandler(this.txtNhaSX_OnValueChanged);
             // 
             // bunifuCustomLabel9
             // 
             this.bunifuCustomLabel9.AutoSize = true;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(84)))), ((int)(((byte)(105)))));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(12, 483);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(12, 318);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(136, 25);
             this.bunifuCustomLabel9.TabIndex = 22;
@@ -344,7 +348,7 @@
             this.btnSubmit.IdleFillColor = System.Drawing.Color.White;
             this.btnSubmit.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnSubmit.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSubmit.Location = new System.Drawing.Point(13, 755);
+            this.btnSubmit.Location = new System.Drawing.Point(296, 655);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(5);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(571, 59);
@@ -354,8 +358,9 @@
             // 
             // controlClose
             // 
+            this.controlClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.controlClose.Image = global::QLBH.Properties.Resources.multiply_32px;
-            this.controlClose.Location = new System.Drawing.Point(556, 12);
+            this.controlClose.Location = new System.Drawing.Point(1121, 12);
             this.controlClose.Name = "controlClose";
             this.controlClose.Size = new System.Drawing.Size(32, 32);
             this.controlClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -381,7 +386,7 @@
             this.btnBrowseImage.IdleFillColor = System.Drawing.Color.White;
             this.btnBrowseImage.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBrowseImage.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBrowseImage.Location = new System.Drawing.Point(172, 711);
+            this.btnBrowseImage.Location = new System.Drawing.Point(165, 559);
             this.btnBrowseImage.Margin = new System.Windows.Forms.Padding(5);
             this.btnBrowseImage.Name = "btnBrowseImage";
             this.btnBrowseImage.Size = new System.Drawing.Size(289, 41);
@@ -392,7 +397,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 604);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 447);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(148, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -403,7 +408,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 816);
+            this.ClientSize = new System.Drawing.Size(1165, 724);
             this.Controls.Add(this.txtNhaSX);
             this.Controls.Add(this.bunifuCustomLabel9);
             this.Controls.Add(this.btnSubmit);
@@ -431,6 +436,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSanPham";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.FormSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.controlClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

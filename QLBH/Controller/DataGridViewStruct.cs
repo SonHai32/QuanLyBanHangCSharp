@@ -13,7 +13,6 @@ namespace QLBH.Controller
         // dbo.DonHang
         private Bunifu.Framework.UI.BunifuCustomDataGrid grv;
         private  DataGridViewColumn maKH = new DataGridViewTextBoxColumn();
-        private DataGridViewColumn tenKH = new DataGridViewTextBoxColumn();
         private DataGridViewColumn ngayDat = new DataGridViewTextBoxColumn();
         private DataGridViewCheckBoxColumn daKichHoat = new DataGridViewCheckBoxColumn();
         private DataGridViewColumn soDH = new DataGridViewTextBoxColumn();
@@ -51,6 +50,10 @@ namespace QLBH.Controller
        private DataGridViewColumn diaChi = new DataGridViewTextBoxColumn();
        private DataGridViewColumn maQH = new DataGridViewTextBoxColumn(); 
        private DataGridViewCheckBoxColumn trangThai = new DataGridViewCheckBoxColumn();
+
+        //dbo.khachHang
+        private DataGridViewColumn tenKH = new DataGridViewTextBoxColumn();
+        private DataGridViewColumn ngaySinh = new DataGridViewTextBoxColumn();
 
         public DataGridViewStruct(Bunifu.Framework.UI.BunifuCustomDataGrid grv)
         {
@@ -343,12 +346,27 @@ namespace QLBH.Controller
             trangThai.TrueValue = "1";
             trangThai.FalseValue = "0";
         }
+
+        public Bunifu.Framework.UI.BunifuCustomDataGrid grvKhachHang()
+        {
+            
+            this.grv.Columns.AddRange(new DataGridViewColumn[] {
+        
+                maKH
+                ,tenKH
+                ,soDT
+                ,email
+                ,diaChi
+                ,maQH
+                ,ngaySinh
+                ,gioiTinh
+                ,ghiChu
+            });
+            return this.grv;
+        }
         public Bunifu.Framework.UI.BunifuCustomDataGrid grvDonHang()
         {
             
-            
-
-
             this.grv.Columns.AddRange(new DataGridViewColumn[] {
             soDH
             ,maKH

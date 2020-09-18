@@ -19,7 +19,6 @@ namespace QLBH.Forms
     {
         private SanPham sanPham;
         private String option;
-        public MyMessage mess;
         
         private readonly MainForm mainForm;
         public FormSanPham(SanPham sp, String option, MainForm mainForm)
@@ -29,7 +28,7 @@ namespace QLBH.Forms
             this.option = option;
 
             InitializeComponent();
-            if (option == "UPDATE")
+            if (this.option == "UPDATE")
             {
                 this.txtMaSP.Enabled = false;
                 this.btnSubmit.ButtonText = "Cập Nhật";
@@ -55,7 +54,7 @@ namespace QLBH.Forms
             this.txtNDTomTat.Text = this.sanPham.NdTomTat;
             this.txtNoiDung.Text = this.sanPham.NoiDung;
             this.txtTenSP.Text = this.sanPham.TenSP;
-
+            this.txtNhaSX.Text = this.sanPham.NhaSanXuat;
         }
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
@@ -85,6 +84,9 @@ namespace QLBH.Forms
             float  giamGia = float.Parse(this.txtGiamGia.Text);
             int maLoai = int.Parse(((DataRowView)(cbLoaiSP.SelectedItem))["maLoai"].ToString());
 
+
+            MyMessage mess;
+
             SanPham sanPham = new SanPham(maSP, tenSP, "aaa", ndTomTat, nhaSX, ngayDang, maLoai, noiDung, "minh", giaBan, giamGia, false);
             DAOSanPham daoSP = new DAOSanPham();
 
@@ -96,22 +98,44 @@ namespace QLBH.Forms
             else
             {
 
-                this.mess = daoSP.updateData(sanPham);
+                mess = daoSP.updateData(sanPham);
                 new MyMessageBox(mess).ShowDialog();
-                
-//                MessageBox.Show(daoSP.updateData(sanPham), "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                if (mess.Status)
+                {
+                    mainForm.loadDataGridView("sanPham");
+                    mainForm.loadDataSanPham();
+                }    
             }
         }
 
         private void controlClose_Click(object sender, EventArgs e)
         {
-
-            string sqlCommand = "SELECT tenSP,L.loaiSP,noiDung,ndTomTat,maSP,L.maLoai,daDuyet,hinhDD,giaBan,ngayDang,taiKhoan,giamGia,nhaSanXuat FROM sanPham SP INNER JOIN loaiSP L ON SP.maLoai = L.maLoai";
-            mainForm.loadDataGridView();
             this.Dispose();
         }
 
-        
+        private void txtNDTomTat_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormSanPham_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHinhDD_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNhaSX_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
