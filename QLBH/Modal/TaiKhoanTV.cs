@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLBH.Modal
 {
-    class TaiKhoanTV
+   public class TaiKhoanTV
     {
         private String taiKhoan;
         private String matKhau;
@@ -22,6 +22,22 @@ namespace QLBH.Modal
         private bool gioiTinh;
         private bool trangThai;
 
+        public TaiKhoanTV()
+        {
+            this.taiKhoan = "";
+            this.matKhau = "";
+            this.hoDem = "";
+            this.tenTV = "";
+            this.soDT = "";
+            this.email = "";
+            this.diaChi = "";
+            this.ghiChu = "";
+            this.maNhom = 1;
+            this.maQH = 1;
+            this.ngaySinh = DateTime.Now;
+            this.gioiTinh = false;
+            this.trangThai = false;
+        }
         public TaiKhoanTV(string taiKhoan, string matKhau, string hoDem, string tenTV, string soDT, string email, string diaChi, string ghiChu, int maNhom, int maQH, DateTime ngaySinh, bool gioiTinh, bool trangThai)
         {
             this.taiKhoan = taiKhoan;
