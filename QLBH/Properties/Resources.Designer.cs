@@ -453,6 +453,16 @@ namespace QLBH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap list_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("list_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap location_48px {
             get {
                 object obj = ResourceManager.GetObject("location_48px", resourceCulture);
@@ -546,6 +556,16 @@ namespace QLBH.Properties {
         internal static System.Drawing.Bitmap note_32px {
             get {
                 object obj = ResourceManager.GetObject("note_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok_32px {
+            get {
+                object obj = ResourceManager.GetObject("ok_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -766,6 +786,26 @@ namespace QLBH.Properties {
         internal static System.Drawing.Bitmap smile__1_ {
             get {
                 object obj = ResourceManager.GetObject("smile (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unavailable_32px {
+            get {
+                object obj = ResourceManager.GetObject("unavailable_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unavailable_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("unavailable_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

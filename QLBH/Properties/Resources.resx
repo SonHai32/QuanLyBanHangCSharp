@@ -133,6 +133,9 @@
   <data name="print_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\print_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ok_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ok_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete_bin_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_bin_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,6 +184,9 @@
   <data name="maximize_button_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximize_button_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="unavailable_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unavailable_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="shopping_basket_red_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopping_basket_red_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,8 +199,8 @@
   <data name="info_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="account_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\account_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit_file_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_file_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -219,6 +225,9 @@
   </data>
   <data name="info_32px3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_32px3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="account_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\account_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_bin_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_bin_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,6 +322,9 @@
   <data name="maximize_button_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximize_button_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="unavailable_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unavailable_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -340,7 +352,7 @@
   <data name="location_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\location_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="group" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="list_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

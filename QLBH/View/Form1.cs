@@ -158,6 +158,7 @@
             }
         }
 
+        
         //add dataBase schema
         /// <summary>
         /// The loadDataSanPham.
@@ -396,7 +397,7 @@
         }
         private void paneTaiKhoan_Click(object sender, EventArgs e)
         {
-            new FormTaiKhoan().ShowDialog();
+            new FormTaiKhoan(new TaiKhoanTV(), true ).ShowDialog();
         }
 
         private void tpAdmin_Click(object sender, EventArgs e)
