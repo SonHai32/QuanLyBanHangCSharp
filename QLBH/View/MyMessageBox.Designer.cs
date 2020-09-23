@@ -36,6 +36,7 @@
             this.btnOK = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lblStatus = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -138,6 +139,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // MyMessageBox
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -164,5 +172,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblStatus;
         private Bunifu.Framework.UI.BunifuThinButton2 btnOK;
         private Bunifu.Framework.UI.BunifuCustomLabel lblMessage;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }
