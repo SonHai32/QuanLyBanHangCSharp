@@ -772,6 +772,7 @@ namespace QLBH.View
             this.grvTaiKhoan.ThemeStyle.RowsStyle.Height = 24;
             this.grvTaiKhoan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
             this.grvTaiKhoan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.grvTaiKhoan.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvTaiKhoan_CellEnter);
             // 
             // bunifuGradientPanel1
             // 

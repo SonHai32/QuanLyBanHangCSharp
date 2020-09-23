@@ -199,7 +199,7 @@ namespace QLBH.View
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            TaiKhoanTV tk = new TaiKhoanTV(
+            this.taiKhoan = new TaiKhoanTV(
             txtTaiKhoan.Text,
             txtMatKhau.Text,
             txtHoDem.Text,
@@ -215,12 +215,11 @@ namespace QLBH.View
             cbTrangThai.SelectedIndex == 1 ? true : false
             );
             if (this.options)
-                this.showMessageBox(new DAOTaiKhoanTV().InsertData(tk));
+                this.showMessageBox(new DAOTaiKhoanTV().InsertData(this.taiKhoan));
             else
-                this.showMessageBox(new DAOTaiKhoanTV().updateData(tk));
+                this.showMessageBox(new DAOTaiKhoanTV().updateData(this.taiKhoan));
 
-            this.taiKhoan = tk;
-            this.options = true;
+            this.options = false;
             this.loadData();
         }
 
@@ -257,7 +256,6 @@ namespace QLBH.View
                     bool.Parse(currentDataGrv.Cells["gioiTinh"].Value.ToString()),
                     bool.Parse(currentDataGrv.Cells["trangThai"].Value.ToString())
                );
-                Console.WriteLine(listSeleted.Count);
 
                 this.options = false;
                 this.tabControl1.SelectedIndex = 0;
@@ -297,6 +295,10 @@ namespace QLBH.View
             if(listSelected.Count != deletedData)
                 new MyMessageBox(new MyMessage(false, "Có lỗi xảy ra !!!\nXóa thất bại\n"+errorMessage+"")).ShowDialog();
         }
-       
+
+        private void grvTaiKhoan_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.currentRowSelect = e.RowIndex;
+        }
     }
 }
