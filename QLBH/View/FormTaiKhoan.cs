@@ -42,8 +42,8 @@ namespace QLBH.View
             this.txtTaiKhoan.Text = this.taiKhoan.TaiKhoan;
             this.txtMatKhau.Text = this.taiKhoan.MatKhau;
             this.txtSoDT.Text = this.taiKhoan.SoDT;
-            this.cbGioiTinh.SelectedIndex = this.taiKhoan.GioiTinh ?  1 : 0;
-            this.cbTrangThai.SelectedIndex = this.taiKhoan.TrangThai? 1 : 0;
+            this.cbGioiTinh.SelectedIndex = this.taiKhoan.GioiTinh ? 1 : 0;
+            this.cbTrangThai.SelectedIndex = this.taiKhoan.TrangThai ? 1 : 0;
 
             if (this.options)
             {
@@ -99,15 +99,7 @@ namespace QLBH.View
 
             this.cbNhomTK.SelectedIndex = this.taiKhoan.MaNhom - 1;
         }
-        private void bunifuMetroTextbox5_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuMetroTextbox1_Enter(object sender, EventArgs e)
-        {
-        }
-
+        
         private void richTextBox_Leave(object sender, EventArgs e)
         {
             if (this.txtGhiChu.Text == "")
@@ -115,42 +107,42 @@ namespace QLBH.View
         }
         private void bunifuMetroTextbox1_Leave(object sender, EventArgs e)
         {
-           switch(((Bunifu.Framework.UI.BunifuMetroTextbox)sender).Name)
+            switch (((Bunifu.Framework.UI.BunifuMetroTextbox)sender).Name)
             {
 
-                    case "txtHoDem":
-                        if (this.txtHoDem.Text == "")
-                            this.placeHoDem.Visible = true;
+                case "txtHoDem":
+                    if (this.txtHoDem.Text == "")
+                        this.placeHoDem.Visible = true;
                     break;
-                    case "txtTen":
-                        if (this.txtTen.Text == "")
-                            this.placeTen.Visible = true;
-                        break;
-                    case "txtDiaChi":
-                        if (this.txtDiaChi.Text == "")
-                            this.placeDiaChi.Visible = true;
-                        break;
-                    case "txtMatKhau":
-                        if (this.txtMatKhau.Text == "")
-                            this.placeMatKhau.Visible = true;
-                        break;
-                    case "txtTaiKhoan":
-                        if (this.txtTaiKhoan.Text == "")
-                            this.placeTaiKhoan.Visible = true;
-                        break;
-                    case "txtEmail":
-                        if (this.txtEmail.Text == "")
-                            this.placeEmail.Visible = true;
-                        break;
-                    case "txtSoDT":
-                        if (this.txtSoDT.Text == "")
-                            this.placeSoDT.Visible = true;
-                        break;
-                    case "txtGhiChu":
-                        if (this.txtGhiChu.Text == "")
-                            this.placeGhiChu.Visible = true;
-                        break;
-            } 
+                case "txtTen":
+                    if (this.txtTen.Text == "")
+                        this.placeTen.Visible = true;
+                    break;
+                case "txtDiaChi":
+                    if (this.txtDiaChi.Text == "")
+                        this.placeDiaChi.Visible = true;
+                    break;
+                case "txtMatKhau":
+                    if (this.txtMatKhau.Text == "")
+                        this.placeMatKhau.Visible = true;
+                    break;
+                case "txtTaiKhoan":
+                    if (this.txtTaiKhoan.Text == "")
+                        this.placeTaiKhoan.Visible = true;
+                    break;
+                case "txtEmail":
+                    if (this.txtEmail.Text == "")
+                        this.placeEmail.Visible = true;
+                    break;
+                case "txtSoDT":
+                    if (this.txtSoDT.Text == "")
+                        this.placeSoDT.Visible = true;
+                    break;
+                case "txtGhiChu":
+                    if (this.txtGhiChu.Text == "")
+                        this.placeGhiChu.Visible = true;
+                    break;
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -161,35 +153,35 @@ namespace QLBH.View
         private void placeHolderClick(object sender, EventArgs e)
         {
             ((Bunifu.Framework.UI.BunifuCustomLabel)sender).Visible = false;
-            switch(((Bunifu.Framework.UI.BunifuCustomLabel)sender).Name)
-                {
+            switch (((Bunifu.Framework.UI.BunifuCustomLabel)sender).Name)
+            {
 
-                    case "placeHoDem":
-                            this.txtHoDem.Focus();
-                        break;
-                    case "placeTen":
-                            this.txtTen.Focus();
-                        break;
-                    case "placeDiaChi":
-                            this.txtDiaChi.Focus();
-                        break;
-                    case "placeMatKhau":
-                            this.txtMatKhau.Focus();
-                        break;
-                    case "placeTaiKhoan":
-                            this.txtTaiKhoan.Focus();
-                        break;
-                    case "placeEmail":
-                            this.txtEmail.Focus();
-                        break;
-                    case "placeSoDT":
-                            this.txtSoDT.Focus();
-                        break;
-                    case "placeGhiChu":
-                            this.txtGhiChu.Focus();
-                        break;
-                }
+                case "placeHoDem":
+                    this.txtHoDem.Focus();
+                    break;
+                case "placeTen":
+                    this.txtTen.Focus();
+                    break;
+                case "placeDiaChi":
+                    this.txtDiaChi.Focus();
+                    break;
+                case "placeMatKhau":
+                    this.txtMatKhau.Focus();
+                    break;
+                case "placeTaiKhoan":
+                    this.txtTaiKhoan.Focus();
+                    break;
+                case "placeEmail":
+                    this.txtEmail.Focus();
+                    break;
+                case "placeSoDT":
+                    this.txtSoDT.Focus();
+                    break;
+                case "placeGhiChu":
+                    this.txtGhiChu.Focus();
+                    break;
             }
+        }
 
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -209,25 +201,26 @@ namespace QLBH.View
         {
             TaiKhoanTV tk = new TaiKhoanTV(
             txtTaiKhoan.Text,
-            txtMatKhau.Text, 
-            txtHoDem.Text, 
-            txtTen.Text, 
-            txtSoDT.Text, 
-            txtEmail.Text, 
-            txtDiaChi.Text, 
-            txtGhiChu.Text, 
-            int.Parse(((DataRowView)cbNhomTK.SelectedItem)["maNhom"].ToString()), 
-            int.Parse(((DataRowView)cbQuanHuyen.SelectedItem)["maQH"].ToString()), 
-            DateTime.Parse(this.txtNgaySinh.Value.ToString()), 
-            cbGioiTinh.SelectedIndex == 1 ? true: false, 
-            cbTrangThai.SelectedIndex == 1 ? true : false   
+            txtMatKhau.Text,
+            txtHoDem.Text,
+            txtTen.Text,
+            txtSoDT.Text,
+            txtEmail.Text,
+            txtDiaChi.Text,
+            txtGhiChu.Text,
+            int.Parse(((DataRowView)cbNhomTK.SelectedItem)["maNhom"].ToString()),
+            int.Parse(((DataRowView)cbQuanHuyen.SelectedItem)["maQH"].ToString()),
+            DateTime.Parse(this.txtNgaySinh.Value.ToString()),
+            cbGioiTinh.SelectedIndex == 1 ? true : false,
+            cbTrangThai.SelectedIndex == 1 ? true : false
             );
             if (this.options)
-                this.showMessageBox(new DAOTaiKhoanTV().InsertData(tk)); 
+                this.showMessageBox(new DAOTaiKhoanTV().InsertData(tk));
             else
-                this.showMessageBox(new DAOTaiKhoanTV().updateData(tk)); 
+                this.showMessageBox(new DAOTaiKhoanTV().updateData(tk));
 
             this.taiKhoan = tk;
+            this.options = true;
             this.loadData();
         }
 
@@ -238,32 +231,15 @@ namespace QLBH.View
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             this.taiKhoan = new TaiKhoanTV();
-            this.tabControl1.SelectedIndex = 1; 
-        }
-
-        private void grvTaiKhoan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void grvTaiKhoan_SelectionChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void grvTaiKhoan_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            listSeleted.Add(e.RowIndex);
-        }
-
-        private void grvTaiKhoan_RowLeave(object sender, DataGridViewCellEventArgs e)
-        {
+            this.tabControl1.SelectedIndex = 0;
+            this.options = true;
+            this.loadData();
         }
 
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if(this.currentRowSelect >= 0)
+            if (this.currentRowSelect >= 0)
             {
                 DataGridViewRow currentDataGrv = this.grvTaiKhoan.Rows[currentRowSelect];
                 this.taiKhoan = new TaiKhoanTV(
@@ -271,7 +247,7 @@ namespace QLBH.View
                     currentDataGrv.Cells["matKhau"].Value.ToString(),
                     currentDataGrv.Cells["hoDem"].Value.ToString(),
                     currentDataGrv.Cells["tenTV"].Value.ToString(),
-                    currentDataGrv.Cells["soDT"].Value.ToString(), 
+                    currentDataGrv.Cells["soDT"].Value.ToString(),
                     currentDataGrv.Cells["email"].Value.ToString(),
                     currentDataGrv.Cells["diaChi"].Value.ToString(),
                     currentDataGrv.Cells["ghiChu"].Value.ToString(),
@@ -289,28 +265,38 @@ namespace QLBH.View
             }
         }
 
-        private void grvTaiKhoan_MultiSelectChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void grvTaiKhoan_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            this.currentRowSelect = e.RowIndex;
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(this.currentRowSelect >= 0)
+            List<int> listSelected = grvTaiKhoan.SelectedRows.Cast<DataGridViewRow>().Select(x => x.Index).ToList();
+
+            int deletedData = 0;
+            string errorMessage = "";
+
+            foreach (int x in listSelected)
             {
-                DataGridViewRow currentDataGrv = this.grvTaiKhoan.Rows[currentRowSelect];
-                this.showMessageBox(new DAOTaiKhoanTV().delectData(currentDataGrv.Cells["taiKhoanTV"].Value.ToString()));
+                try
+                {
+                    DAOTaiKhoanTV dao = new DAOTaiKhoanTV();
+                    if(dao.delectData(grvTaiKhoan.Rows[x].Cells["taiKhoanTV"].Value.ToString()).Status)
+                        deletedData++;
+                }
+                catch (Exception ex)
+                {
+                    errorMessage += ex;
+                }
+
+
+            }
+            if (deletedData > 0)
+            {
+                this.showMessageBox(new MyMessage(true, "" + deletedData + " Tài khoản đã được xóa"));
                 this.taiKhoan = new TaiKhoanTV();
                 this.loadData();
-                return;
             }
-
-            this.showMessageBox(new MyMessage(false, "Vui lòng chọn mục để xóa"));
-
+            if(listSelected.Count != deletedData)
+                new MyMessageBox(new MyMessage(false, "Có lỗi xảy ra !!!\nXóa thất bại\n"+errorMessage+"")).ShowDialog();
         }
+       
     }
 }

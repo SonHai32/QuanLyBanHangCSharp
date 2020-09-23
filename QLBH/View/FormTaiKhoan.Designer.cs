@@ -84,8 +84,6 @@ namespace QLBH.View
             this.txtHoDem = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.tabPageDanhSachTK = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
@@ -99,14 +97,14 @@ namespace QLBH.View
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.taiKhoanTV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoDem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenTV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taiKhoanTV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNhom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,8 +116,6 @@ namespace QLBH.View
             this.tabPageTaiKhoan.SuspendLayout();
             this.tabPageDanhSachTK.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
@@ -618,8 +614,6 @@ namespace QLBH.View
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Controls.Add(this.btnEdit);
             this.panel4.Controls.Add(this.btnAdd);
@@ -630,30 +624,6 @@ namespace QLBH.View
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(746, 104);
             this.panel4.TabIndex = 15;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::QLBH.Properties.Resources.unavailable_32px1;
-            this.pictureBox4.Location = new System.Drawing.Point(233, 36);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::QLBH.Properties.Resources.ok_32px;
-            this.pictureBox3.Location = new System.Drawing.Point(271, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
             // 
             // btnDelete
             // 
@@ -745,14 +715,14 @@ namespace QLBH.View
             this.grvTaiKhoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grvTaiKhoan.ColumnHeadersHeight = 50;
             this.grvTaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.taiKhoanTV,
-            this.matKhau,
-            this.tenNhom,
-            this.maNhom,
             this.hoDem,
             this.tenTV,
+            this.taiKhoanTV,
+            this.matKhau,
+            this.maNhom,
             this.ngaySinh,
             this.gioiTinh,
+            this.tenNhom,
             this.soDT,
             this.email,
             this.diaChi,
@@ -802,11 +772,6 @@ namespace QLBH.View
             this.grvTaiKhoan.ThemeStyle.RowsStyle.Height = 24;
             this.grvTaiKhoan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(185)))), ((int)(((byte)(246)))));
             this.grvTaiKhoan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.grvTaiKhoan.MultiSelectChanged += new System.EventHandler(this.grvTaiKhoan_MultiSelectChanged);
-            this.grvTaiKhoan.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvTaiKhoan_CellEnter);
-            this.grvTaiKhoan.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvTaiKhoan_RowEnter);
-            this.grvTaiKhoan.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvTaiKhoan_RowLeave);
-            this.grvTaiKhoan.SelectionChanged += new System.EventHandler(this.grvTaiKhoan_SelectionChanged);
             // 
             // bunifuGradientPanel1
             // 
@@ -912,6 +877,24 @@ namespace QLBH.View
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // hoDem
+            // 
+            this.hoDem.DataPropertyName = "hoDem";
+            this.hoDem.HeaderText = "Họ đệm";
+            this.hoDem.MinimumWidth = 6;
+            this.hoDem.Name = "hoDem";
+            this.hoDem.ReadOnly = true;
+            this.hoDem.Width = 104;
+            // 
+            // tenTV
+            // 
+            this.tenTV.DataPropertyName = "tenTV";
+            this.tenTV.HeaderText = "Tên thành viên";
+            this.tenTV.MinimumWidth = 6;
+            this.tenTV.Name = "tenTV";
+            this.tenTV.ReadOnly = true;
+            this.tenTV.Width = 152;
+            // 
             // taiKhoanTV
             // 
             this.taiKhoanTV.DataPropertyName = "taiKhoan";
@@ -932,15 +915,6 @@ namespace QLBH.View
             this.matKhau.Visible = false;
             this.matKhau.Width = 113;
             // 
-            // tenNhom
-            // 
-            this.tenNhom.DataPropertyName = "tenNhom";
-            this.tenNhom.HeaderText = "Tên nhóm";
-            this.tenNhom.MinimumWidth = 6;
-            this.tenNhom.Name = "tenNhom";
-            this.tenNhom.ReadOnly = true;
-            this.tenNhom.Width = 117;
-            // 
             // maNhom
             // 
             this.maNhom.DataPropertyName = "maNhom";
@@ -950,24 +924,6 @@ namespace QLBH.View
             this.maNhom.ReadOnly = true;
             this.maNhom.Visible = false;
             this.maNhom.Width = 119;
-            // 
-            // hoDem
-            // 
-            this.hoDem.DataPropertyName = "hoDem";
-            this.hoDem.HeaderText = "Họ đệm";
-            this.hoDem.MinimumWidth = 6;
-            this.hoDem.Name = "hoDem";
-            this.hoDem.ReadOnly = true;
-            this.hoDem.Width = 104;
-            // 
-            // tenTV
-            // 
-            this.tenTV.DataPropertyName = "tenTV";
-            this.tenTV.HeaderText = "Tên thành viên";
-            this.tenTV.MinimumWidth = 6;
-            this.tenTV.Name = "tenTV";
-            this.tenTV.ReadOnly = true;
-            this.tenTV.Width = 152;
             // 
             // ngaySinh
             // 
@@ -986,6 +942,15 @@ namespace QLBH.View
             this.gioiTinh.Name = "gioiTinh";
             this.gioiTinh.ReadOnly = true;
             this.gioiTinh.Width = 105;
+            // 
+            // tenNhom
+            // 
+            this.tenNhom.DataPropertyName = "tenNhom";
+            this.tenNhom.HeaderText = "Tên nhóm";
+            this.tenNhom.MinimumWidth = 6;
+            this.tenNhom.Name = "tenNhom";
+            this.tenNhom.ReadOnly = true;
+            this.tenNhom.Width = 117;
             // 
             // soDT
             // 
@@ -1067,8 +1032,6 @@ namespace QLBH.View
             this.tabPageDanhSachTK.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
@@ -1125,22 +1088,20 @@ namespace QLBH.View
         private System.Windows.Forms.PictureBox pictureBox11;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private Guna.UI2.WinForms.Guna2DataGridView grvTaiKhoan;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnListTab;
         private System.Windows.Forms.Button btnAddTab;
         private CustomTabControl tabControl1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.ComboBox cbTrangThai;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taiKhoanTV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matKhau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenNhom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maNhom;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoDem;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taiKhoanTV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matKhau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNhom;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNhom;
         private System.Windows.Forms.DataGridViewTextBoxColumn soDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
