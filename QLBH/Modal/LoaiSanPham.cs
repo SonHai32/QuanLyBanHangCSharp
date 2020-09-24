@@ -19,6 +19,12 @@ namespace QLBH.Modal
             this.ghiChu = "";
         } 
 
+        public LoaiSanPham(string loaiSP, string ghiChu)
+        {
+            this.loaiSP = loaiSP;
+            this.ghiChu = ghiChu;
+        }
+
         public LoaiSanPham(int maLoai, string loaiSP, string ghiChu)
         {
             this.maLoai = maLoai;
