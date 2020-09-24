@@ -32,14 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSP));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.mainPane = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.txtHinhDD = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.placeGiamGia = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.placeNdTomTat = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.placeNoiDung = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.placeGiaBan = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.placeNdTomTat = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtNdTomTat = new System.Windows.Forms.RichTextBox();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -48,7 +50,6 @@
             this.txtGiamGia = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtGiaBan = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.placeNoiDung = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.hinhDD = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -63,18 +64,19 @@
             this.txtNhaSX = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtMaSP = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtTenSP = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.rightPane = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddLoaiSP = new System.Windows.Forms.PictureBox();
             this.mainPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hinhDD)).BeginInit();
             this.rightPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddLoaiSP)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -89,10 +91,18 @@
             this.bunifuDragControl1.TargetControl = this.mainPane;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // bunifuDragControl2
+            // 
+            this.bunifuDragControl2.Fixed = true;
+            this.bunifuDragControl2.Horizontal = true;
+            this.bunifuDragControl2.TargetControl = this.rightPane;
+            this.bunifuDragControl2.Vertical = true;
+            // 
             // mainPane
             // 
             this.mainPane.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPane.BackgroundImage")));
             this.mainPane.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainPane.Controls.Add(this.btnAddLoaiSP);
             this.mainPane.Controls.Add(this.txtHinhDD);
             this.mainPane.Controls.Add(this.pictureBox3);
             this.mainPane.Controls.Add(this.btnReset);
@@ -185,6 +195,32 @@
             this.placeGiamGia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.placeGiamGia.Click += new System.EventHandler(this.placeHolderClick);
             // 
+            // placeNdTomTat
+            // 
+            this.placeNdTomTat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.placeNdTomTat.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.placeNdTomTat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(147)))), ((int)(((byte)(146)))));
+            this.placeNdTomTat.Location = new System.Drawing.Point(159, 521);
+            this.placeNdTomTat.Name = "placeNdTomTat";
+            this.placeNdTomTat.Size = new System.Drawing.Size(590, 64);
+            this.placeNdTomTat.TabIndex = 93;
+            this.placeNdTomTat.Text = "Nội dung tóm tắt";
+            this.placeNdTomTat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.placeNdTomTat.Click += new System.EventHandler(this.placeHolderClick);
+            // 
+            // placeNoiDung
+            // 
+            this.placeNoiDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
+            this.placeNoiDung.Font = new System.Drawing.Font("Arial", 10.8F);
+            this.placeNoiDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(147)))), ((int)(((byte)(146)))));
+            this.placeNoiDung.Location = new System.Drawing.Point(161, 448);
+            this.placeNoiDung.Name = "placeNoiDung";
+            this.placeNoiDung.Size = new System.Drawing.Size(590, 64);
+            this.placeNoiDung.TabIndex = 78;
+            this.placeNoiDung.Text = "Nội dung";
+            this.placeNoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.placeNoiDung.Click += new System.EventHandler(this.placeHolderClick);
+            // 
             // placeGiaBan
             // 
             this.placeGiaBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
@@ -209,19 +245,6 @@
             this.bunifuCustomLabel12.TabIndex = 94;
             this.bunifuCustomLabel12.Text = "Tóm Tắt";
             this.bunifuCustomLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // placeNdTomTat
-            // 
-            this.placeNdTomTat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.placeNdTomTat.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.placeNdTomTat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(147)))), ((int)(((byte)(146)))));
-            this.placeNdTomTat.Location = new System.Drawing.Point(159, 521);
-            this.placeNdTomTat.Name = "placeNdTomTat";
-            this.placeNdTomTat.Size = new System.Drawing.Size(590, 64);
-            this.placeNdTomTat.TabIndex = 93;
-            this.placeNdTomTat.Text = "Nội dung tóm tắt";
-            this.placeNdTomTat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.placeNdTomTat.Click += new System.EventHandler(this.placeHolderClick);
             // 
             // txtNdTomTat
             // 
@@ -342,19 +365,6 @@
             this.txtGiaBan.OnValueChanged += new System.EventHandler(this.txtGiaBan_OnValueChanged);
             this.txtGiaBan.Leave += new System.EventHandler(this.bunifuMetroTextbox1_Leave);
             // 
-            // placeNoiDung
-            // 
-            this.placeNoiDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(248)))), ((int)(((byte)(247)))));
-            this.placeNoiDung.Font = new System.Drawing.Font("Arial", 10.8F);
-            this.placeNoiDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(147)))), ((int)(((byte)(146)))));
-            this.placeNoiDung.Location = new System.Drawing.Point(161, 448);
-            this.placeNoiDung.Name = "placeNoiDung";
-            this.placeNoiDung.Size = new System.Drawing.Size(590, 64);
-            this.placeNoiDung.TabIndex = 78;
-            this.placeNoiDung.Text = "Nội dung";
-            this.placeNoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.placeNoiDung.Click += new System.EventHandler(this.placeHolderClick);
-            // 
             // hinhDD
             // 
             this.hinhDD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
@@ -443,7 +453,7 @@
             this.cbLoaiSP.ItemHeight = 21;
             this.cbLoaiSP.Items.AddRange(new object[] {
             ""});
-            this.cbLoaiSP.Location = new System.Drawing.Point(264, 219);
+            this.cbLoaiSP.Location = new System.Drawing.Point(163, 219);
             this.cbLoaiSP.MaximumSize = new System.Drawing.Size(221, 0);
             this.cbLoaiSP.Name = "cbLoaiSP";
             this.cbLoaiSP.Size = new System.Drawing.Size(221, 29);
@@ -558,13 +568,6 @@
             this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenSP.Leave += new System.EventHandler(this.bunifuMetroTextbox1_Leave);
             // 
-            // bunifuDragControl2
-            // 
-            this.bunifuDragControl2.Fixed = true;
-            this.bunifuDragControl2.Horizontal = true;
-            this.bunifuDragControl2.TargetControl = this.rightPane;
-            this.bunifuDragControl2.Vertical = true;
-            // 
             // rightPane
             // 
             this.rightPane.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightPane.BackgroundImage")));
@@ -632,6 +635,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnAddLoaiSP
+            // 
+            this.btnAddLoaiSP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddLoaiSP.Image = global::QLBH.Properties.Resources.add_new_32px;
+            this.btnAddLoaiSP.Location = new System.Drawing.Point(456, 219);
+            this.btnAddLoaiSP.Name = "btnAddLoaiSP";
+            this.btnAddLoaiSP.Size = new System.Drawing.Size(29, 29);
+            this.btnAddLoaiSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAddLoaiSP.TabIndex = 100;
+            this.btnAddLoaiSP.TabStop = false;
+            this.btnAddLoaiSP.Click += new System.EventHandler(this.btnAddLoaiSP_Click);
+            // 
             // FormSP
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -650,6 +665,7 @@
             this.rightPane.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddLoaiSP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -694,5 +710,6 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txtHinhDD;
+        private System.Windows.Forms.PictureBox btnAddLoaiSP;
     }
 }
