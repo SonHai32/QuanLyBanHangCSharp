@@ -21,7 +21,7 @@ namespace QLBH.Controller
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "INSERT INTO loaiSanPham VALUES(@loaiSP, @ghiChu)";
+                cmd.CommandText = "INSERT INTO loaiSP VALUES(@loaiSP, @ghiChu)";
                 cmd.Parameters.Add("@loaiSP", System.Data.SqlDbType.NVarChar).Value = loaiSanPham.LoaiSP;
                 cmd.Parameters.Add("@ghiChu", System.Data.SqlDbType.NVarChar).Value = loaiSanPham.GhiChu;
                 int result = cmd.ExecuteNonQuery();
@@ -46,7 +46,7 @@ namespace QLBH.Controller
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "UPDATE loaiSanPham set loaiSP=@loaiSP, ghiChu=@ghiChu WHERE maLoai=@maLoai)";
+                cmd.CommandText = "UPDATE loaiSP set loaiSP=@loaiSP, ghiChu=@ghiChu WHERE maLoai=@maLoai)";
                 cmd.Parameters.Add("@maLoai", System.Data.SqlDbType.Int).Value = loaiSanPham.MaLoai;
                 cmd.Parameters.Add("@loaiSanPham", System.Data.SqlDbType.NVarChar).Value = loaiSanPham.LoaiSP;
                 cmd.Parameters.Add("@ghiChu", System.Data.SqlDbType.NVarChar).Value = loaiSanPham.GhiChu;
