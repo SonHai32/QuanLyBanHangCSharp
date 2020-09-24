@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="App_Code\Checked.cs" />
     <Compile Include="Controller\DAOBaiViet.cs" />
+    <Compile Include="Controller\DAOLoaiSP.cs" />
     <Compile Include="Controller\DAOTaiKhoanTV.cs" />
     <Compile Include="Controller\DataGridViewStruct.cs" />
     <Compile Include="Controller\DAO.cs" />
