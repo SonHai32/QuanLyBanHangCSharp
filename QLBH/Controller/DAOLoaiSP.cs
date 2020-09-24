@@ -22,7 +22,7 @@ namespace QLBH.Controller
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandText = "INSERT INTO loaiSanPham VALUES(@loaiSP, @ghiChu)";
-                cmd.Parameters.Add("@loaiSanPham", System.Data.SqlDbType.NVarChar).Value = loaiSanPham.LoaiSP;
+                cmd.Parameters.Add("@loaiSP", System.Data.SqlDbType.NVarChar).Value = loaiSanPham.LoaiSP;
                 cmd.Parameters.Add("@ghiChu", System.Data.SqlDbType.NVarChar).Value = loaiSanPham.GhiChu;
                 int result = cmd.ExecuteNonQuery();
 
