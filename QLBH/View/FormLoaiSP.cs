@@ -125,7 +125,7 @@ namespace QLBH.View
                 this.options = false;
                 this.loadData();
                 this.loadGrvLoaiSP();
-                this.formSP.loadData(); 
+                this.formSP.loadCBLoaiSP(); 
             }
 
         }

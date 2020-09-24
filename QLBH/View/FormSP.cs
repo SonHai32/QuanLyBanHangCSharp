@@ -55,7 +55,7 @@ namespace QLBH.View
      //      this.loadCBNhomTK();
      //      this.loadGrvTaiKhoan("Select [taiKhoan], [matKhau], tk.[maNhom],[hoDem],[tenTV],[ngaysinh],[gioiTinh],[soDT],[email],[diaChi], tk.[maQH],[trangThai], tk.[ghiChu], qh.[tenQH],nhom.[tenNhom]from dbo.taiKhoanTV tk INNER JOIN nhomTk nhom on tk.maNhom = nhom.maNhom INNER JOIN quanHuyen qh on qh.maQH = tk.maQH");
         }
-        private void loadCBLoaiSP()
+        public void loadCBLoaiSP()
         {
             this.cbLoaiSP.DataSource = new DAO().getDataSource(new DAO().getDataAdapter("SELECT loaiSP, maLoai from dbo.loaiSP")).DefaultView;
             this.cbLoaiSP.DisplayMember = "loaiSP";
