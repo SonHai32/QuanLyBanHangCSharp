@@ -123,6 +123,16 @@ namespace QLBH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_48px {
+            get {
+                object obj = ResourceManager.GetObject("add_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_image_48px {
             get {
                 object obj = ResourceManager.GetObject("add_image_48px", resourceCulture);
@@ -136,6 +146,16 @@ namespace QLBH.Properties {
         internal static System.Drawing.Bitmap add_new_32px {
             get {
                 object obj = ResourceManager.GetObject("add_new_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_pie_chart_report_48px {
+            get {
+                object obj = ResourceManager.GetObject("add_pie_chart_report_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,6 +303,16 @@ namespace QLBH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_file_48px {
+            get {
+                object obj = ResourceManager.GetObject("delete_file_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_48px {
             get {
                 object obj = ResourceManager.GetObject("edit_48px", resourceCulture);
@@ -336,6 +366,16 @@ namespace QLBH.Properties {
         internal static System.Drawing.Bitmap edit_file_48px1 {
             get {
                 object obj = ResourceManager.GetObject("edit_file_48px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_file_48px2 {
+            get {
+                object obj = ResourceManager.GetObject("edit_file_48px2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

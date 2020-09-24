@@ -23,6 +23,7 @@ namespace QLBH.View
             this.options = options;
             this.formSP = formSP;
             this.loadGrvLoaiSP();
+            this.loadData();
         }
 
         private void loadGrvLoaiSP()
@@ -34,7 +35,7 @@ namespace QLBH.View
         {
             this.txtTenLoai.Text = this.loaiSanPham.LoaiSP;
             this.txtGhiChu.Text = this.loaiSanPham.GhiChu;
-            if (options)
+            if (this.options)
                 this.btnSubmit.Text = "Thêm";
             else
                 this.btnSubmit.Text = "Sửa";

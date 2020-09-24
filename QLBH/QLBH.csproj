@@ -396,5 +396,17 @@
   <ItemGroup>
     <None Include="Resources\add_image_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_file_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_file_48px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_pie_chart_report_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
