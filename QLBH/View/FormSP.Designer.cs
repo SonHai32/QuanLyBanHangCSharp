@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSP));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.mainPane = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnAddLoaiSP = new System.Windows.Forms.PictureBox();
             this.txtHinhDD = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnReset = new System.Windows.Forms.Button();
@@ -64,19 +64,19 @@
             this.txtNhaSX = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtMaSP = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtTenSP = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.rightPane = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAddLoaiSP = new System.Windows.Forms.PictureBox();
             this.mainPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddLoaiSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hinhDD)).BeginInit();
             this.rightPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddLoaiSP)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -90,13 +90,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.mainPane;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuDragControl2
-            // 
-            this.bunifuDragControl2.Fixed = true;
-            this.bunifuDragControl2.Horizontal = true;
-            this.bunifuDragControl2.TargetControl = this.rightPane;
-            this.bunifuDragControl2.Vertical = true;
             // 
             // mainPane
             // 
@@ -143,6 +136,18 @@
             this.mainPane.Quality = 10;
             this.mainPane.Size = new System.Drawing.Size(760, 681);
             this.mainPane.TabIndex = 29;
+            // 
+            // btnAddLoaiSP
+            // 
+            this.btnAddLoaiSP.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddLoaiSP.Image = global::QLBH.Properties.Resources.add_new_32px;
+            this.btnAddLoaiSP.Location = new System.Drawing.Point(456, 219);
+            this.btnAddLoaiSP.Name = "btnAddLoaiSP";
+            this.btnAddLoaiSP.Size = new System.Drawing.Size(29, 29);
+            this.btnAddLoaiSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAddLoaiSP.TabIndex = 100;
+            this.btnAddLoaiSP.TabStop = false;
+            this.btnAddLoaiSP.Click += new System.EventHandler(this.btnAddLoaiSP_Click);
             // 
             // txtHinhDD
             // 
@@ -568,6 +573,13 @@
             this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenSP.Leave += new System.EventHandler(this.bunifuMetroTextbox1_Leave);
             // 
+            // bunifuDragControl2
+            // 
+            this.bunifuDragControl2.Fixed = true;
+            this.bunifuDragControl2.Horizontal = true;
+            this.bunifuDragControl2.TargetControl = this.rightPane;
+            this.bunifuDragControl2.Vertical = true;
+            // 
             // rightPane
             // 
             this.rightPane.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightPane.BackgroundImage")));
@@ -635,18 +647,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnAddLoaiSP
-            // 
-            this.btnAddLoaiSP.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddLoaiSP.Image = global::QLBH.Properties.Resources.add_new_32px;
-            this.btnAddLoaiSP.Location = new System.Drawing.Point(456, 219);
-            this.btnAddLoaiSP.Name = "btnAddLoaiSP";
-            this.btnAddLoaiSP.Size = new System.Drawing.Size(29, 29);
-            this.btnAddLoaiSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAddLoaiSP.TabIndex = 100;
-            this.btnAddLoaiSP.TabStop = false;
-            this.btnAddLoaiSP.Click += new System.EventHandler(this.btnAddLoaiSP_Click);
-            // 
             // FormSP
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -657,15 +657,16 @@
             this.Name = "FormSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSP";
+            this.TopMost = true;
             this.mainPane.ResumeLayout(false);
             this.mainPane.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddLoaiSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hinhDD)).EndInit();
             this.rightPane.ResumeLayout(false);
             this.rightPane.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAddLoaiSP)).EndInit();
             this.ResumeLayout(false);
 
         }
