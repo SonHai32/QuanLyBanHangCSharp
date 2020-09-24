@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLBH.Modal
 {
-    class LoaiSanPham
+    public class LoaiSanPham
     {
         private int maLoai;
         private String loaiSP;
