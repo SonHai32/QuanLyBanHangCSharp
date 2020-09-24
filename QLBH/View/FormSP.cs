@@ -25,7 +25,7 @@ namespace QLBH.View
             this.options = options;
             this.loadData();
         }
-        private void loadData()
+        public void loadData()
         {
             this.txtGiaBan.Text = String.Format("{0:0,0}", this.sanPham.GiaBan);
             this.txtGiamGia.Text = this.sanPham.GiamGia.ToString();
@@ -209,7 +209,7 @@ namespace QLBH.View
             String ndTomTat = this.txtNdTomTat.Text;
             String noiDung = this.txtNoiDung.Text;
             String nhaSX = this.txtNhaSX.Text;
-            DateTime ngayDang = this.options ? DateTime.Now : DateTime.Parse(this.txtNgayDang.Text);
+            DateTime ngayDang = this.options ? DateTime.Now : this.sanPham.NgayDang;
             Double giaBan = Double.Parse(this.txtGiaBan.Text);
             float  giamGia = float.Parse(this.txtGiamGia.Text);
             int maLoai = int.Parse(((DataRowView)(cbLoaiSP.SelectedItem))["maLoai"].ToString());
@@ -237,5 +237,9 @@ namespace QLBH.View
             
         }
 
+        private void btnAddLoaiSP_Click(object sender, EventArgs e)
+        {
+            new FormLoaiSP(new LoaiSanPham(), true, this).Show();
+        }
     }
 }
