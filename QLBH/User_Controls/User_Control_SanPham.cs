@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLBH.Modal;
-using QLBH.Forms;
 using QLBH.View;
 using QLBH.Controller;
 namespace QLBH.User_Controls
@@ -32,8 +31,7 @@ namespace QLBH.User_Controls
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-
-            new FormSanPham(sanPham, "UPDATE", this.mainForm).ShowDialog();
+            new FormSP(sanPham, false, this.mainForm).Show();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Checked.cs" />
+    <Compile Include="Controller\DAOBaiViet.cs" />
     <Compile Include="Controller\DAOTaiKhoanTV.cs" />
     <Compile Include="Controller\DataGridViewStruct.cs" />
     <Compile Include="Controller\DAO.cs" />
@@ -69,11 +70,11 @@
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormSanPham.cs">
+    <Compile Include="View\FormLoaiSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormSanPham.Designer.cs">
-      <DependentUpon>FormSanPham.cs</DependentUpon>
+    <Compile Include="View\FormLoaiSP.Designer.cs">
+      <DependentUpon>FormLoaiSP.cs</DependentUpon>
     </Compile>
     <Compile Include="Modal\BaiViet.cs" />
     <Compile Include="Modal\ChiTietDonHang.cs" />
@@ -92,6 +93,12 @@
     <Compile Include="User_Controls\User_Control_SanPham.Designer.cs">
       <DependentUpon>User_Control_SanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSP.Designer.cs">
+      <DependentUpon>FormSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,8 +114,8 @@
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormSanPham.resx">
-      <DependentUpon>FormSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormLoaiSP.resx">
+      <DependentUpon>FormLoaiSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -122,6 +129,9 @@
     </Compile>
     <EmbeddedResource Include="User_Controls\User_Control_SanPham.resx">
       <DependentUpon>User_Control_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSP.resx">
+      <DependentUpon>FormSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTaiKhoan.resx">
       <DependentUpon>FormTaiKhoan.cs</DependentUpon>
@@ -378,6 +388,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\list_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_image_48px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

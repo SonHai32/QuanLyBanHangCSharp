@@ -1,7 +1,6 @@
 ﻿namespace QLBH
 {
     using QLBH.Controller;
-    using QLBH.Forms;
     using QLBH.Modal;
     using QLBH.View;
 
@@ -341,7 +340,7 @@
                     float.Parse(currentDataGrv.Cells["giamGia"].Value.ToString()),
                     (currentDataGrv.Cells["daDuyet"].Value.ToString() == "1" ? true : false));
 
-                new FormSanPham(sp, "UPDATE", this).ShowDialog();
+                new FormSP(sp, false, this).Show();
 
 
             }

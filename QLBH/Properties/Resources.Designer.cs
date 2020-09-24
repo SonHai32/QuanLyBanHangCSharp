@@ -123,6 +123,16 @@ namespace QLBH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_image_48px {
+            get {
+                object obj = ResourceManager.GetObject("add_image_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_new_32px {
             get {
                 object obj = ResourceManager.GetObject("add_new_32px", resourceCulture);
@@ -766,6 +776,16 @@ namespace QLBH.Properties {
         internal static System.Drawing.Bitmap shopping_basket_red_48px {
             get {
                 object obj = ResourceManager.GetObject("shopping_basket_red_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart {
+            get {
+                object obj = ResourceManager.GetObject("shopping-cart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
