@@ -86,9 +86,20 @@ namespace QLBH.View
 
             this.cbQuanHuyen.DataSource = new DAO().getDataSource(new DAO().getDataAdapter("SELECT maQH, tenQH from dbo.quanHuyen")).DefaultView;
             this.cbQuanHuyen.DisplayMember = "tenQH";
-            this.cbQuanHuyen.ValueMember = "maQH";
+            this.cbQuanHuyen.ValueMember = "tenQH";
 
-            this.cbQuanHuyen.SelectedIndex = this.taiKhoan.MaQH - 1;
+            if (options)
+                this.cbQuanHuyen.SelectedIndex = 0;
+            else
+            {
+                List<string> getTenNhom = cbQuanHuyen.Items.Cast<DataRowView>()
+                    .Where(x => x["maQH"].ToString() == this.taiKhoan.MaQH.ToString())
+                    .Select(x => x["tenQH"].ToString()).ToList();
+                this.cbQuanHuyen.SelectedValue = getTenNhom[0];
+            }
+
+
+
         }
         public void loadCBNhomTK()
         {
