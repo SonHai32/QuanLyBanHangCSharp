@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace QLBH.Modal
 {
-    class BaiViet
+    public class BaiViet
     {
         private String maBV;
         private String tenBV;
         private String hinhDD;
         private String ndTomTat;
-        private String maLoai;
+        private int maLoai;
         private String noiDung;
         private String taiKhoan;
         private DateTime ngayDang;
         private bool daDuyet;
 
-        public BaiViet(string maBV, string tenBV, string hinhDD, string ndTomTat, string maLoai, string noiDung, string taiKhoan, DateTime ngayDang, bool daDuyet)
+        public BaiViet(string maBV, string tenBV, string hinhDD, string ndTomTat,int  maLoai, string noiDung, string taiKhoan, DateTime ngayDang, bool daDuyet)
         {
             this.maBV = maBV;
             this.tenBV = tenBV;
@@ -35,7 +35,7 @@ namespace QLBH.Modal
         public string TenBV { get => tenBV; set => tenBV = value; }
         public string HinhDD { get => hinhDD; set => hinhDD = value; }
         public string NdTomTat { get => ndTomTat; set => ndTomTat = value; }
-        public string MaLoai { get => maLoai; set => maLoai = value; }
+        public int MaLoai { get => maLoai; set => maLoai = value; }
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public string TaiKhoan { get => taiKhoan; set => taiKhoan = value; }
         public DateTime NgayDang { get => ngayDang; set => ngayDang = value; }
