@@ -95,9 +95,18 @@ namespace QLBH.View
 
             this.cbNhomTK.DataSource = new DAO().getDataSource(new DAO().getDataAdapter("SELECT maNhom, tenNhom from dbo.nhomTk")).DefaultView;
             this.cbNhomTK.DisplayMember = "tenNhom";
-            this.cbNhomTK.ValueMember = "maNhom";
+            this.cbNhomTK.ValueMember = "tenNhom";
 
-            this.cbNhomTK.SelectedIndex = this.taiKhoan.MaNhom - 1;
+            if (options)
+                this.cbNhomTK.SelectedIndex = 0;
+            else
+            {
+                List<string> getTenNhom = cbNhomTK.Items.Cast<DataRowView>()
+                    .Where(x => x["maNhom"].ToString() == this.taiKhoan.MaNhom.ToString())
+                    .Select(x => x["tenNhom"].ToString()).ToList();
+                this.cbNhomTK.SelectedValue = getTenNhom[0];
+            }
+
         }
         
         private void richTextBox_Leave(object sender, EventArgs e)
