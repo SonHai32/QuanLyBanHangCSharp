@@ -36,29 +36,12 @@ namespace QLBH.Controller
             command.Parameters.Add("@gioiTinh", SqlDbType.Bit).Value = taiKhoan.GioiTinh ? 1 :0;
             command.Parameters.Add("@trangThai", SqlDbType.Bit).Value = taiKhoan.TrangThai ? 1 : 0;
 
-            /*this.command.Parameters.AddWithValue("@taiKhoan", taiKhoan.TaiKhoan);
-            this.command.Parameters.AddWithValue("@maKhau", taiKhoan.MatKhau);
-            this.command.Parameters.AddWithValue("@maNhom", taiKhoan.MaNhom);
-            this.command.Parameters.AddWithValue("@hoDem", taiKhoan.HoDem);
-            this.command.Parameters.AddWithValue("@tenTV", taiKhoan.TenTV);
-            this.command.Parameters.AddWithValue("@ngaySinh", taiKhoan.NgaySinh);
-            this.command.Parameters.AddWithValue("@gioiTinh", taiKhoan.GioiTinh);
-            this.command.Parameters.AddWithValue("@soDT", taiKhoan.SoDT);
-            this.command.Parameters.AddWithValue("@email", taiKhoan.Email);
-            this.command.Parameters.AddWithValue("@diaChi", taiKhoan.DiaChi);
-            this.command.Parameters.AddWithValue("@maQH", taiKhoan.MaQH);
-            this.command.Parameters.AddWithValue("@trangThai", taiKhoan.TrangThai);
-            this.command.Parameters.AddWithValue("@ghiChu", taiKhoan.GhiChu);*/
-            //SqlCommand command = con.CreateCommand();
-            //command.CommandText = "INSERT INTO dbo.taiKhoanTV ( taiKhoan, matKhau,  hoDem,  tenTV, soDT, email, diaChi, ghiChu, maNhom, maQH, ngaySinh, gioiTinh, trangThai ) " +
-            //   "values('"+taiKhoan.TaiKhoan+"', '"+taiKhoan.MatKhau+"', N'"+taiKhoan.HoDem+"', N'"+taiKhoan.TenTV+"', '"+taiKhoan.SoDT+"', '"+taiKhoan.Email+"', N'"+taiKhoan.DiaChi+"', N'"+taiKhoan.GhiChu+"', "+taiKhoan.MaNhom+", "+taiKhoan.MaQH+", "+taiKhoan.NgaySinh.ToString("yyyy-MM-dd")+", "+(taiKhoan.GioiTinh ? 1 : 0 )+", "+(taiKhoan.TrangThai ? 1 : 0)+")";
-
             MyMessage mess;
+            
             try
             {
                 int result = command.ExecuteNonQuery();
                 mess = new MyMessage(result >= 0, (result >= 0 ? "Thêm Thành Công" : "Thất Bại"));
-                //return command.ExecuteNonQuery() >= 0 ? "Thêm Thành Công Sản Phẩm " + sanPham.TenSP : "Thêm Đơn Hàng Không Thành Công";
                 return mess;
             }
             catch (SqlException e)
