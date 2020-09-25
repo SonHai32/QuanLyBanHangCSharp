@@ -46,7 +46,7 @@ namespace QLBH.View
             {
                 this.btnSubmit.Text = "Sửa";
                 this.disablePlaceHolder();
-                if (this.loaiSanPham.GhiChu != "")
+                if (this.loaiSanPham.GhiChu == "")
                     this.placeGhiChu.Visible = true;
             }
 
@@ -140,7 +140,7 @@ namespace QLBH.View
                 message = new DAOLoaiSP().updateData(this.loaiSanPham);
             }
 
-            this.showMessageBox(message, false);
+            this.showMessageBox(message, true);
 
             if (message.Status)
             {
@@ -164,6 +164,7 @@ namespace QLBH.View
         {
             this.loaiSanPham = new LoaiSanPham();
             this.options = true;
+            this.tabControl1.SelectedIndex = 0;
             this.loadData();
         }
 
