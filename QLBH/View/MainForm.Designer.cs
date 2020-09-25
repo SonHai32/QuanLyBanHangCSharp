@@ -641,9 +641,9 @@
             // 
             this.tbDonHang.Controls.Add(this.grvData);
             this.tbDonHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDonHang.Location = new System.Drawing.Point(4, 24);
+            this.tbDonHang.Location = new System.Drawing.Point(4, 25);
             this.tbDonHang.Name = "tbDonHang";
-            this.tbDonHang.Size = new System.Drawing.Size(962, 432);
+            this.tbDonHang.Size = new System.Drawing.Size(962, 431);
             this.tbDonHang.TabIndex = 2;
             this.tbDonHang.UseVisualStyleBackColor = true;
             // 
@@ -696,7 +696,7 @@
             this.grvData.RowHeadersWidth = 51;
             this.grvData.RowTemplate.Height = 24;
             this.grvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvData.Size = new System.Drawing.Size(962, 432);
+            this.grvData.Size = new System.Drawing.Size(962, 431);
             this.grvData.TabIndex = 0;
             this.grvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvData_CellContentClick);
             // 
@@ -710,10 +710,10 @@
             this.tpAdmin.Controls.Add(this.panel8);
             this.tpAdmin.Controls.Add(this.panel7);
             this.tpAdmin.Font = new System.Drawing.Font("Arial", 12F);
-            this.tpAdmin.Location = new System.Drawing.Point(4, 24);
+            this.tpAdmin.Location = new System.Drawing.Point(4, 25);
             this.tpAdmin.Name = "tpAdmin";
             this.tpAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAdmin.Size = new System.Drawing.Size(962, 432);
+            this.tpAdmin.Size = new System.Drawing.Size(962, 431);
             this.tpAdmin.TabIndex = 3;
             this.tpAdmin.UseVisualStyleBackColor = true;
             this.tpAdmin.Click += new System.EventHandler(this.tpAdmin_Click);
@@ -1003,6 +1003,7 @@
             this.MinimumSize = new System.Drawing.Size(1300, 680);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
