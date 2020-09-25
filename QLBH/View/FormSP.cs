@@ -198,9 +198,9 @@ namespace QLBH.View
             this.showPlaceHolder();
         }
 
-        private void ShowMessageBox(MyMessage message)
+        private void ShowMessageBox(MyMessage message, bool messageIcon)
         {
-            new MyMessageBox(message).ShowDialog();
+            new MyMessageBox(message, messageIcon).ShowDialog();
         }
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -226,7 +226,7 @@ namespace QLBH.View
                 message = new DAOSanPham().updateData(sanPham);
             }
 
-            this.ShowMessageBox(message);
+            this.ShowMessageBox(message, true);
             if (message.Status)
             {
                 mainForm.loadDataSanPham();

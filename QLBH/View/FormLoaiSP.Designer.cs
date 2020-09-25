@@ -51,14 +51,13 @@
             this.loaiSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bottomPane = new System.Windows.Forms.Panel();
+            this.btnEdit = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDelete = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnNew = new Bunifu.Framework.UI.BunifuFlatButton();
             this.topPane = new System.Windows.Forms.Panel();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.rightPane = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnListTab = new System.Windows.Forms.Button();
             this.btnAddTab = new System.Windows.Forms.Button();
@@ -66,6 +65,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.tabPageTaiKhoan.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageDSLoai.SuspendLayout();
@@ -308,6 +308,8 @@
             this.grvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvData.Size = new System.Drawing.Size(615, 287);
             this.grvData.TabIndex = 19;
+            this.grvData.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvData_CellEnter);
+            this.grvData.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.grvData_CellLeave);
             // 
             // maLoai
             // 
@@ -336,14 +338,122 @@
             // 
             // bottomPane
             // 
-            this.bottomPane.Controls.Add(this.bunifuFlatButton3);
-            this.bottomPane.Controls.Add(this.bunifuFlatButton2);
-            this.bottomPane.Controls.Add(this.bunifuFlatButton1);
+            this.bottomPane.Controls.Add(this.btnEdit);
+            this.bottomPane.Controls.Add(this.btnDelete);
+            this.bottomPane.Controls.Add(this.btnNew);
             this.bottomPane.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bottomPane.Location = new System.Drawing.Point(20, 407);
             this.bottomPane.Name = "bottomPane";
             this.bottomPane.Size = new System.Drawing.Size(615, 100);
             this.bottomPane.TabIndex = 18;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(159)))), ((int)(((byte)(180)))));
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(111)))), ((int)(((byte)(143)))));
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEdit.BorderRadius = 0;
+            this.btnEdit.ButtonText = "Sửa";
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEdit.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEdit.Iconimage = global::QLBH.Properties.Resources.edit_file_48px2;
+            this.btnEdit.Iconimage_right = null;
+            this.btnEdit.Iconimage_right_Selected = null;
+            this.btnEdit.Iconimage_Selected = null;
+            this.btnEdit.IconMarginLeft = 0;
+            this.btnEdit.IconMarginRight = 0;
+            this.btnEdit.IconRightVisible = true;
+            this.btnEdit.IconRightZoom = 0D;
+            this.btnEdit.IconVisible = true;
+            this.btnEdit.IconZoom = 50D;
+            this.btnEdit.IsTab = false;
+            this.btnEdit.Location = new System.Drawing.Point(413, 20);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(111)))), ((int)(((byte)(143)))));
+            this.btnEdit.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(159)))), ((int)(((byte)(180)))));
+            this.btnEdit.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEdit.selected = false;
+            this.btnEdit.Size = new System.Drawing.Size(170, 60);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEdit.Textcolor = System.Drawing.Color.White;
+            this.btnEdit.TextFont = new System.Drawing.Font("Montserrat Alternates Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(95)))));
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.ButtonText = "Xóa";
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDelete.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDelete.Iconimage = global::QLBH.Properties.Resources.delete_file_48px;
+            this.btnDelete.Iconimage_right = null;
+            this.btnDelete.Iconimage_right_Selected = null;
+            this.btnDelete.Iconimage_Selected = null;
+            this.btnDelete.IconMarginLeft = 0;
+            this.btnDelete.IconMarginRight = 0;
+            this.btnDelete.IconRightVisible = true;
+            this.btnDelete.IconRightZoom = 0D;
+            this.btnDelete.IconVisible = true;
+            this.btnDelete.IconZoom = 50D;
+            this.btnDelete.IsTab = false;
+            this.btnDelete.Location = new System.Drawing.Point(222, 20);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
+            this.btnDelete.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(95)))));
+            this.btnDelete.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDelete.selected = false;
+            this.btnDelete.Size = new System.Drawing.Size(170, 60);
+            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.Textcolor = System.Drawing.Color.White;
+            this.btnDelete.TextFont = new System.Drawing.Font("Montserrat Alternates Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(254)))), ((int)(((byte)(159)))));
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(254)))), ((int)(((byte)(111)))));
+            this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNew.BorderRadius = 0;
+            this.btnNew.ButtonText = "Thêm";
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.DisabledColor = System.Drawing.Color.Gray;
+            this.btnNew.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnNew.Iconimage = global::QLBH.Properties.Resources.add_pie_chart_report_48px;
+            this.btnNew.Iconimage_right = null;
+            this.btnNew.Iconimage_right_Selected = null;
+            this.btnNew.Iconimage_Selected = null;
+            this.btnNew.IconMarginLeft = 0;
+            this.btnNew.IconMarginRight = 0;
+            this.btnNew.IconRightVisible = true;
+            this.btnNew.IconRightZoom = 0D;
+            this.btnNew.IconVisible = true;
+            this.btnNew.IconZoom = 50D;
+            this.btnNew.IsTab = false;
+            this.btnNew.Location = new System.Drawing.Point(31, 20);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(254)))), ((int)(((byte)(111)))));
+            this.btnNew.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(254)))), ((int)(((byte)(159)))));
+            this.btnNew.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnNew.selected = false;
+            this.btnNew.Size = new System.Drawing.Size(170, 60);
+            this.btnNew.TabIndex = 0;
+            this.btnNew.Text = "Thêm";
+            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNew.Textcolor = System.Drawing.Color.White;
+            this.btnNew.TextFont = new System.Drawing.Font("Montserrat Alternates Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // topPane
             // 
@@ -375,125 +485,6 @@
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuMaterialTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.rightPane;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuDragControl2
-            // 
-            this.bunifuDragControl2.Fixed = true;
-            this.bunifuDragControl2.Horizontal = true;
-            this.bunifuDragControl2.TargetControl = this.panel1;
-            this.bunifuDragControl2.Vertical = true;
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(159)))), ((int)(((byte)(180)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(111)))), ((int)(((byte)(143)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Sửa";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = global::QLBH.Properties.Resources.edit_file_48px2;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 50D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(413, 20);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(111)))), ((int)(((byte)(143)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(159)))), ((int)(((byte)(180)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(170, 60);
-            this.bunifuFlatButton3.TabIndex = 2;
-            this.bunifuFlatButton3.Text = "Sửa";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Montserrat Alternates Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(95)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Xóa";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = global::QLBH.Properties.Resources.delete_file_48px;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 50D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(222, 20);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(95)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(170, 60);
-            this.bunifuFlatButton2.TabIndex = 1;
-            this.bunifuFlatButton2.Text = "Xóa";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Montserrat Alternates Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(254)))), ((int)(((byte)(159)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(254)))), ((int)(((byte)(111)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Thêm";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::QLBH.Properties.Resources.add_pie_chart_report_48px;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 50D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(31, 20);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(254)))), ((int)(((byte)(111)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(254)))), ((int)(((byte)(159)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(170, 60);
-            this.bunifuFlatButton1.TabIndex = 0;
-            this.bunifuFlatButton1.Text = "Thêm";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Montserrat Alternates Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // pictureBox11
             // 
             this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -505,6 +496,13 @@
             this.pictureBox11.TabIndex = 1;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.rightPane;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // rightPane
             // 
@@ -610,6 +608,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // bunifuDragControl2
+            // 
+            this.bunifuDragControl2.Fixed = true;
+            this.bunifuDragControl2.Horizontal = true;
+            this.bunifuDragControl2.TargetControl = this.panel1;
+            this.bunifuDragControl2.Vertical = true;
+            // 
             // FormLoaiSP
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -669,8 +674,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
         private System.Windows.Forms.Panel bottomPane;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnNew;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEdit;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDelete;
     }
 }

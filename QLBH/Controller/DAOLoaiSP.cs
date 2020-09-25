@@ -71,10 +71,10 @@ namespace QLBH.Controller
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "DELETE FROM loaiSP WHERE maLoai=@maLoai)";
+                cmd.CommandText = "DELETE FROM loaiSP WHERE maLoai=@maLoai";
                 cmd.Parameters.Add("@maLoai", System.Data.SqlDbType.Int).Value = loaiSanPham.MaLoai;
                 int result = cmd.ExecuteNonQuery();
-                return new MyMessage(result >= 0, (result >= 0 ? "Xóa Thành Công " + loaiSanPham.LoaiSP : "Xóa Thất Bại " + loaiSanPham.LoaiSP));
+                return new MyMessage(result >= 0, (result >= 0 ? "Xóa Thành Công " + loaiSanPham.MaLoai : "Xóa Thất Bại " + loaiSanPham.MaLoai));
             }
             catch (SqlException ex)
             {

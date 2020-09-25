@@ -225,7 +225,7 @@ namespace QLBH.View
 
         private void showMessageBox(MyMessage message)
         {
-            new MyMessageBox(message).ShowDialog();
+            new MyMessageBox(message, true).ShowDialog();
         }
         private void pictureBox10_Click(object sender, EventArgs e)
         {
@@ -293,7 +293,7 @@ namespace QLBH.View
                 this.loadData();
             }
             if(listSelected.Count != deletedData)
-                new MyMessageBox(new MyMessage(false, "Có lỗi xảy ra !!!\nXóa thất bại\n"+errorMessage+"")).ShowDialog();
+                new MyMessageBox(new MyMessage(false, "Có lỗi xảy ra !!!\nXóa thất bại\n"+errorMessage+""), true).ShowDialog();
         }
 
         private void grvTaiKhoan_CellEnter(object sender, DataGridViewCellEventArgs e)

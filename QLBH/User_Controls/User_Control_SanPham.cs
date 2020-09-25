@@ -36,7 +36,7 @@ namespace QLBH.User_Controls
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            new MyMessageBox(new DAOSanPham().delectData(this.sanPham.MaSP)).ShowDialog();
+            new MyMessageBox(new DAOSanPham().delectData(this.sanPham.MaSP), true).ShowDialog();
             this.mainForm.loadDataGridView("sanPham");
             this.mainForm.loadListSanPham();
             this.mainForm.loadDataSanPham();

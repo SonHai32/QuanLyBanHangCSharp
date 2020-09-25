@@ -408,5 +408,14 @@
   <ItemGroup>
     <None Include="Resources\add_pie_chart_report_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sad %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smile %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dead.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
