@@ -59,12 +59,19 @@
     <Compile Include="App_Code\Checked.cs" />
     <Compile Include="Controller\DAOBaiViet.cs" />
     <Compile Include="Controller\DAOLoaiSP.cs" />
+    <Compile Include="Controller\DAONhomTK.cs" />
     <Compile Include="Controller\DAOTaiKhoanTV.cs" />
     <Compile Include="Controller\DataGridViewStruct.cs" />
     <Compile Include="Controller\DAO.cs" />
     <Compile Include="Controller\DAOSanPham.cs" />
     <Compile Include="Controller\DatabaseSchema.cs" />
     <Compile Include="Controller\MyMessage.cs" />
+    <Compile Include="View\FormNhomTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNhomTK.Designer.cs">
+      <DependentUpon>FormNhomTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +119,9 @@
     <Compile Include="View\MyMessageBox.Designer.cs">
       <DependentUpon>MyMessageBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormNhomTK.resx">
+      <DependentUpon>FormNhomTK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -416,6 +426,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
