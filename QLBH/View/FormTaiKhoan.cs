@@ -90,7 +90,7 @@ namespace QLBH.View
 
             this.cbQuanHuyen.SelectedIndex = this.taiKhoan.MaQH - 1;
         }
-        private void loadCBNhomTK()
+        public void loadCBNhomTK()
         {
 
             this.cbNhomTK.DataSource = new DAO().getDataSource(new DAO().getDataAdapter("SELECT maNhom, tenNhom from dbo.nhomTk")).DefaultView;
@@ -299,6 +299,11 @@ namespace QLBH.View
         private void grvTaiKhoan_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             this.currentRowSelect = e.RowIndex;
+        }
+
+        private void btnAddNhomTK_Click(object sender, EventArgs e)
+        {
+            new FormNhomTK(new NhomTK(), true, this).Show();
         }
     }
 }
