@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLBH.Modal
 {
-    class NhomTK
+    public class NhomTK
     {
         private int maNhom;
         private String tenNhom;
@@ -15,6 +15,20 @@ namespace QLBH.Modal
         public NhomTK(int maNhom, string tenNhom, string ghiChu)
         {
             this.maNhom = maNhom;
+            this.tenNhom = tenNhom;
+            this.ghiChu = ghiChu;
+        }
+
+
+        public NhomTK()
+        {
+            this.maNhom = 0;
+            this.tenNhom = "";
+            this.ghiChu = "";
+        }
+
+        public NhomTK(string tenNhom, string ghiChu)
+        {
             this.tenNhom = tenNhom;
             this.ghiChu = ghiChu;
         }
