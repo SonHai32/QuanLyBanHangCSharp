@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using System.Data;
 using QLBH.Modal;
 
 namespace QLBH.Controller
@@ -18,45 +19,34 @@ namespace QLBH.Controller
             con.Open();
 
             SqlCommand command= con.CreateCommand();
-            command.CommandText = "INSERT INTO dbo.baiViet VALUES(@maBV, @hinhDD, @ndTomTat, @ngayDang, @maLoai, @noiDung, @taiKhoan, @daDuyet)";
-            
-            /*command.Parameters.Add("@maBV", SqlDbType.VarChar).Value = taiKhoan.TaiKhoan;
-            command.Parameters.Add("@matKhau", SqlDbType.VarChar).Value = taiKhoan.MatKhau;
-            command.Parameters.Add("@hoDem", SqlDbType.NVarChar).Value = taiKhoan.HoDem;
-            command.Parameters.Add("@tenTV", SqlDbType.NVarChar).Value = taiKhoan.TenTV;
-            command.Parameters.Add("@soDT", SqlDbType.VarChar).Value = taiKhoan.SoDT;
-            command.Parameters.Add("@email", SqlDbType.VarChar).Value = taiKhoan.Email;
-            command.Parameters.Add("@diaChi", SqlDbType.NVarChar).Value = taiKhoan.DiaChi;
-            command.Parameters.Add("@ghiChu", SqlDbType.NText).Value = taiKhoan.GhiChu;
-            command.Parameters.Add("@maNhom", SqlDbType.Int).Value = taiKhoan.MaNhom;
-            command.Parameters.Add("@maQH", SqlDbType.Int).Value = taiKhoan.MaQH;
-            command.Parameters.Add("@ngaySinh", SqlDbType.DateTime2).Value = taiKhoan.NgaySinh;
-            command.Parameters.Add("@gioiTinh", SqlDbType.Bit).Value = taiKhoan.GioiTinh ? 1 :0;
-            command.Parameters.Add("@trangThai", SqlDbType.Bit).Value = taiKhoan.TrangThai ? 1 : 0;*/
+            command.CommandText = "INSERT INTO dbo.baiViet VALUES(" +
+                "@maBV," +
+                "@tenBV" +
+                ",@hinhDD," +
+                "@ndTomTat," +
+                "@ngayDang," +
+                "@maLoai," +
+                "@noiDung," +
+                "@taiKhoan" +
+                ",@daDuyet)";
 
-            /*this.command.Parameters.AddWithValue("@taiKhoan", taiKhoan.TaiKhoan);
-            this.command.Parameters.AddWithValue("@maKhau", taiKhoan.MatKhau);
-            this.command.Parameters.AddWithValue("@maNhom", taiKhoan.MaNhom);
-            this.command.Parameters.AddWithValue("@hoDem", taiKhoan.HoDem);
-            this.command.Parameters.AddWithValue("@tenTV", taiKhoan.TenTV);
-            this.command.Parameters.AddWithValue("@ngaySinh", taiKhoan.NgaySinh);
-            this.command.Parameters.AddWithValue("@gioiTinh", taiKhoan.GioiTinh);
-            this.command.Parameters.AddWithValue("@soDT", taiKhoan.SoDT);
-            this.command.Parameters.AddWithValue("@email", taiKhoan.Email);
-            this.command.Parameters.AddWithValue("@diaChi", taiKhoan.DiaChi);
-            this.command.Parameters.AddWithValue("@maQH", taiKhoan.MaQH);
-            this.command.Parameters.AddWithValue("@trangThai", taiKhoan.TrangThai);
-            this.command.Parameters.AddWithValue("@ghiChu", taiKhoan.GhiChu);*/
-            //SqlCommand command = con.CreateCommand();
-            //command.CommandText = "INSERT INTO dbo.taiKhoanTV ( taiKhoan, matKhau,  hoDem,  tenTV, soDT, email, diaChi, ghiChu, maNhom, maQH, ngaySinh, gioiTinh, trangThai ) " +
-            //   "values('"+taiKhoan.TaiKhoan+"', '"+taiKhoan.MatKhau+"', N'"+taiKhoan.HoDem+"', N'"+taiKhoan.TenTV+"', '"+taiKhoan.SoDT+"', '"+taiKhoan.Email+"', N'"+taiKhoan.DiaChi+"', N'"+taiKhoan.GhiChu+"', "+taiKhoan.MaNhom+", "+taiKhoan.MaQH+", "+taiKhoan.NgaySinh.ToString("yyyy-MM-dd")+", "+(taiKhoan.GioiTinh ? 1 : 0 )+", "+(taiKhoan.TrangThai ? 1 : 0)+")";
+            command.Parameters.Add("@maBV", SqlDbType.VarChar).Value = baiViet.MaBV;
+            command.Parameters.Add("@tenBV", SqlDbType.NVarChar).Value = baiViet.TenBV;
+            command.Parameters.Add("@hinhDD", SqlDbType.VarChar).Value = baiViet.HinhDD;
+            command.Parameters.Add("@ndTomTat", SqlDbType.NVarChar).Value = baiViet.NdTomTat;
+            command.Parameters.Add("@ngayDang", SqlDbType.DateTime).Value = baiViet.NgayDang;
+            command.Parameters.Add("@maLoai", SqlDbType.Int).Value = baiViet.MaLoai;
+            command.Parameters.Add("@noiDung", SqlDbType.NVarChar).Value = baiViet.NoiDung;
+            command.Parameters.Add("@taiKhoan", SqlDbType.VarChar).Value = baiViet.TaiKhoan;
+            command.Parameters.Add("@daDuyet", SqlDbType.Bit).Value = baiViet.DaDuyet ? 1 : 0;
 
             MyMessage mess;
+            
             try
             {
                 int result = command.ExecuteNonQuery();
-                mess = new MyMessage(result >= 0, (result >= 0 ? "Thêm Thành Công" : "Thất Bại"));
-                //return command.ExecuteNonQuery() >= 0 ? "Thêm Thành Công Sản Phẩm " + sanPham.TenSP : "Thêm Đơn Hàng Không Thành Công";
+                mess = new MyMessage(result >= 0, (result >= 0 ? "Thêm Thành Công "+baiViet.TenBV+"" : "Thêm Thất Bại "+baiViet.TenBV+""));
+
                 return mess;
             }
             catch (SqlException e)
@@ -69,7 +59,7 @@ namespace QLBH.Controller
             }
         }
 
-       /* public MyMessage updateData(TaiKhoanTV taiKhoan)
+        public MyMessage updateData(BaiViet baiViet)
         {
             SqlConnection con = new DAO().getConnection();
 
@@ -78,24 +68,28 @@ namespace QLBH.Controller
             {
                 con.Open();
                 SqlCommand command = con.CreateCommand();
-                command.CommandText = "UPDATE dbo.taiKhoanTV set maNhom=@maNhom, hoDem=@hoDem, tenTV=@tenTV, ngaySinh=@ngaysinh, gioiTinh=@gioiTinh, soDT=@soDT,email=@email,diaChi=@diaChi,maQH=@maQH,trangThai=@trangThai,ghiChu=@ghiChu WHERE taiKhoan=@taiKhoan";
-
-                command.Parameters.Add("@taiKhoan", SqlDbType.VarChar).Value = taiKhoan.TaiKhoan;
-                command.Parameters.Add("@matKhau", SqlDbType.VarChar).Value = taiKhoan.MatKhau;
-                command.Parameters.Add("@hoDem", SqlDbType.NVarChar).Value = taiKhoan.HoDem;
-                command.Parameters.Add("@tenTV", SqlDbType.NVarChar).Value = taiKhoan.TenTV;
-                command.Parameters.Add("@soDT", SqlDbType.VarChar).Value = taiKhoan.SoDT;
-                command.Parameters.Add("@email", SqlDbType.VarChar).Value = taiKhoan.Email;
-                command.Parameters.Add("@diaChi", SqlDbType.NVarChar).Value = taiKhoan.DiaChi;
-                command.Parameters.Add("@ghiChu", SqlDbType.NText).Value = taiKhoan.GhiChu;
-                command.Parameters.Add("@maNhom", SqlDbType.Int).Value = taiKhoan.MaNhom;
-                command.Parameters.Add("@maQH", SqlDbType.Int).Value = taiKhoan.MaQH;
-                command.Parameters.Add("@ngaySinh", SqlDbType.DateTime2).Value = taiKhoan.NgaySinh;
-                command.Parameters.Add("@gioiTinh", SqlDbType.Bit).Value = taiKhoan.GioiTinh ? 1 :0;
-                command.Parameters.Add("@trangThai", SqlDbType.Bit).Value = taiKhoan.TrangThai ? 1 : 0;
+                command.CommandText = "UPDATE dbo.baiViet set" +
+                "tenBV=@tenBV," +
+                "hinhDD=@hinhDD," +
+                "ndTomTat=@ndTomTat," +
+                "ngayDang=@ngayDang," +
+                "maLoai=@maLoai," +
+                "noiDung=@noiDung," +
+                "taiKhoan=@taiKhoan," +
+                "daDuyet=@daDuyet" +
+                "WHERE maBV=@maBV";
+                
+                command.Parameters.Add("@maBV", SqlDbType.VarChar).Value = baiViet.MaBV;
+                command.Parameters.Add("@tenBV", SqlDbType.NVarChar).Value = baiViet.TenBV;
+                command.Parameters.Add("@hinhDD", SqlDbType.VarChar).Value = baiViet.HinhDD;
+                command.Parameters.Add("@ndTomTat", SqlDbType.NVarChar).Value = baiViet.NdTomTat;
+                command.Parameters.Add("@ngayDang", SqlDbType.DateTime).Value = baiViet.NgayDang;
+                command.Parameters.Add("@maLoai", SqlDbType.Int).Value = baiViet.MaLoai;
+                command.Parameters.Add("@noiDung", SqlDbType.NVarChar).Value = baiViet.NoiDung;
+                command.Parameters.Add("@taiKhoan", SqlDbType.VarChar).Value = baiViet.TaiKhoan;
                 
                 int result = command.ExecuteNonQuery();
-                MyMessage message = new MyMessage(result >= 0, (result >= 0 ? "Sửa Đổi Thành Công" : "Sửa Đổi Thất Bại"));
+                MyMessage message = new MyMessage(result >= 0, (result >= 0 ? "Sửa Đổi Thành Công "+baiViet.MaBV+""  : "Sửa Đổi Thất Bại "+baiViet.MaBV+""));
                 return message;
             }
             catch (SqlException e)
@@ -109,18 +103,18 @@ namespace QLBH.Controller
 
         }
 
-        public MyMessage delectData(String taiKhoan)
+        public MyMessage delectData(String maBV)
         {
             SqlConnection con = new DAO().getConnection();
             try
             {
                 con.Open();
                 SqlCommand command = con.CreateCommand();
-                command.CommandText = "DELETE FROM dbo.taiKhoanTV WHERE taiKhoan=@taiKhoan";
-                command.Parameters.Add("@taiKhoan", SqlDbType.VarChar).Value = taiKhoan;
+                command.CommandText = "DELETE FROM dbo.baiViet WHERE maBV=@maBV";
+                command.Parameters.Add("@maBV", SqlDbType.VarChar).Value = maBV;
 
                 int result = command.ExecuteNonQuery();
-                MyMessage message = new MyMessage(result >= 0, (result >= 0 ? "Xóa Thành Công" : "Xóa Không Thành Công"));
+                MyMessage message = new MyMessage(result >= 0, (result >= 0 ? "Xóa Thành Công "+maBV+"" : "Xóa Không Thành Công "+maBV+""));
                 return message;
             }
             catch(SqlException e)
@@ -133,6 +127,5 @@ namespace QLBH.Controller
             }
 
         }
-    }*/
     }
 }
