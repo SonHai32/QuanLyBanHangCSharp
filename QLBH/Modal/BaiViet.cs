@@ -18,6 +18,20 @@ namespace QLBH.Modal
         private DateTime ngayDang;
         private bool daDuyet;
 
+        public BaiViet()
+        {
+            this.MaBV = "";
+            this.tenBV = "";
+            this.hinhDD = "";
+            this.ndTomTat = "";
+            this.maLoai = 0;
+            this.noiDung = "";
+            this.taiKhoan = "";
+            this.NgayDang = DateTime.Now;
+            this.daDuyet = false;
+
+        }
+
         public BaiViet(string maBV, string tenBV, string hinhDD, string ndTomTat,int  maLoai, string noiDung, string taiKhoan, DateTime ngayDang, bool daDuyet)
         {
             this.maBV = maBV;
