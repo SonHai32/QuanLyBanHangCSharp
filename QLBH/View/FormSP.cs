@@ -59,10 +59,16 @@ namespace QLBH.View
         {
             this.cbLoaiSP.DataSource = new DAO().getDataSource(new DAO().getDataAdapter("SELECT loaiSP, maLoai from dbo.loaiSP")).DefaultView;
             this.cbLoaiSP.DisplayMember = "loaiSP";
+            this.cbLoaiSP.ValueMember = "loaiSP";
             if (options)
                 this.cbLoaiSP.SelectedIndex = 0;
             else
-                this.cbLoaiSP.SelectedIndex = this.sanPham.MaLoai - 1;
+            {
+                List<string> getLoaiSP = cbLoaiSP.Items.Cast<DataRowView>()
+                    .Where(x => x["maLoai"].ToString() == this.sanPham.MaLoai.ToString())
+                    .Select(x => x["loaiSP"].ToString()).ToList();
+                this.cbLoaiSP.SelectedValue =  getLoaiSP[0];
+            }
         }
 
         private void showPlaceHolder()

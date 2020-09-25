@@ -66,6 +66,12 @@
     <Compile Include="Controller\DAOSanPham.cs" />
     <Compile Include="Controller\DatabaseSchema.cs" />
     <Compile Include="Controller\MyMessage.cs" />
+    <Compile Include="View\FormBaiViet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBaiViet.Designer.cs">
+      <DependentUpon>FormBaiViet.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormNhomTK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="View\MyMessageBox.Designer.cs">
       <DependentUpon>MyMessageBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormBaiViet.resx">
+      <DependentUpon>FormBaiViet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormNhomTK.resx">
       <DependentUpon>FormNhomTK.cs</DependentUpon>
     </EmbeddedResource>
