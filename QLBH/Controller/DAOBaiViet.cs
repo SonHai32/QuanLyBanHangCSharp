@@ -68,7 +68,7 @@ namespace QLBH.Controller
             {
                 con.Open();
                 SqlCommand command = con.CreateCommand();
-                command.CommandText = "UPDATE dbo.baiViet set" +
+                command.CommandText = "UPDATE dbo.baiViet set " +
                 "tenBV=@tenBV," +
                 "hinhDD=@hinhDD," +
                 "ndTomTat=@ndTomTat," +
@@ -76,7 +76,7 @@ namespace QLBH.Controller
                 "maLoai=@maLoai," +
                 "noiDung=@noiDung," +
                 "taiKhoan=@taiKhoan," +
-                "daDuyet=@daDuyet" +
+                "daDuyet=@daDuyet " +
                 "WHERE maBV=@maBV";
                 
                 command.Parameters.Add("@maBV", SqlDbType.VarChar).Value = baiViet.MaBV;
@@ -87,6 +87,7 @@ namespace QLBH.Controller
                 command.Parameters.Add("@maLoai", SqlDbType.Int).Value = baiViet.MaLoai;
                 command.Parameters.Add("@noiDung", SqlDbType.NVarChar).Value = baiViet.NoiDung;
                 command.Parameters.Add("@taiKhoan", SqlDbType.VarChar).Value = baiViet.TaiKhoan;
+                command.Parameters.Add("@daDuyet", SqlDbType.Bit).Value = baiViet.DaDuyet ? 1: 0;
                 
                 int result = command.ExecuteNonQuery();
                 MyMessage message = new MyMessage(result >= 0, (result >= 0 ? "Sửa Đổi Thành Công "+baiViet.MaBV+""  : "Sửa Đổi Thất Bại "+baiViet.MaBV+""));
